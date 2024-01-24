@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(16, 26, 41, 255);
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+  }
+  
+  .column {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .footer-img{
+    height: 8rem;
+    width: auto;
+  }

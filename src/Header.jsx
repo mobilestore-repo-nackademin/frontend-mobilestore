@@ -4,12 +4,16 @@ import './Header.css';
 const Header = () => {
   return (
     <header>
-        {/* Lägg en A tagg för att länka till "homepage" sen */}
-      <img src="./photos/mobilestore.png" alt="our-logo" />
-      <h1>MobileStore</h1>
+        {/* 
+        Lägg en A tagg för att länka till "homepage" sen 
+        Kan även separera Navbar och header. Navbaren kan vara position absolut och header relative. Då följer navbaren med hela tiden.
+        */}
+      <img className='logo-img-header' src="./photos/mobilestore.png" alt="our-logo" />
+      <h1 className='h1-header'>MobileStore</h1>
       <nav>
         <ul>
           <li><a href="/">Hem</a></li>
+          <li><a href="/kontakt">Om oss</a></li>
           <li><a href="/om">Mobiltelefoner</a></li>
           <li><a href="/om">Skal</a></li>
           <li><a href="/om">Laddare</a></li>

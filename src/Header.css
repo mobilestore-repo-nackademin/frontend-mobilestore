@@ -3,17 +3,18 @@ header {
     color: #fff;
     padding: 1rem;
     text-align: center;
-    position: fixed;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 2;
   }
-  img{
+  .logo-img-header{
     height: 8rem;
     width: auto;
   }
 
-  h1 {
+  .h1-header {
     margin: 0;
   }
   

@@ -1,0 +1,97 @@
+/* Homepage.css */
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Hela skärmens höjd */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero {
+  
+  flex: 7; /* Tar upp 70% av flex-containerns höjd */
+  background-image: url('/photos/sale-sign.jpg'); /* Lägg till sökvägen till din bildfil */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centrera texten horisontellt */
+}
+
+.hero h1 {
+  margin-bottom: 20px; /* Lägg till extra mellanrum under texten om det behövs */
+}
+
+
+.boxes .box button {
+  margin-top: auto; /* Placerar knappen längst ner och centreras horisontellt */
+  background-color: #3498db; /* Samma bakgrundsfärg som hero-knappen */
+  color: #fff;
+  padding: 10px 20px; /* Justera padding efter behov */
+  border: none;
+  cursor: pointer;
+}
+.hero button{
+  margin-top: auto; /* Placerar knappen längst ner och centreras horisontellt */
+  background-color: #3498db; /* Samma bakgrundsfärg som hero-knappen */
+  color: #fff;
+  width: auto;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.boxes {
+  flex: 3; /* Tar upp 30% av flex-containerns höjd */
+  display: flex;
+  justify-content: space-around; /* Lägg till detta för att centrera och skapa utrymme mellan boxarna */
+}
+
+.box {
+  flex: 1; /* Varje box tar upp lika mycket utrymme */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  margin: 10px;
+  text-align: center;
+}
+.box1{
+  background-image: url('/photos/samsung-phone.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centrera texten horisontellt */
+}
+.box2{
+  background-image: url('/photos/phone-cases.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centrera texten horisontellt */
+}
+.box3{
+  background-image: url('/photos/phone-charger.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centrera texten horisontellt */
+}
