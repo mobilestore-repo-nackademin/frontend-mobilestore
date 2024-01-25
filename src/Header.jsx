@@ -17,7 +17,7 @@ const Header = () => {
           <li><a href="/om">Mobiltelefoner</a></li>
           <li><a href="/om">Skal</a></li>
           <li><a href="/om">Laddare</a></li>
-          <li><a href="/kontakt">Kontakt</a></li>
+          <li><a href="/Support">Kontakt</a></li>
         </ul>
       </nav>
     </header>
