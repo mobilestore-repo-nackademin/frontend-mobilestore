@@ -11,10 +11,9 @@ const AboutUsPage = () => {
             <img className='Heroimgaboutus2' src="../../photos/Mobilstore.2.jpeg" alt="" />
             <img className='Heroimgaboutus3' src="../../photos/Mobilstore.3.jpeg" alt="" />
             <div className="hero">
+                <a href="/products">Gå till Produktssidan</a>
+                <a href="/Homepage">Gå till Produktssidan</a>
 
-            <p>
-                Välkommen till vår webbplats! Vi är ett fantastiskt team som strävar efter att erbjuda högkvalitativa produkter och en bra köpupplevelse för våra kunder.
-            </p>
                 <div className="hero1">
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
