@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:src/AboutUsPage/HeroSection.jsx
-=======
 import './AboutUsCss/AboutUs.css'
 
->>>>>>> 9c3e06b4b0e2b6216e755a34c7b57e9442ddd50e:src/AboutUsPage/HeroSectionAbout.jsx
-
-import './AboutUsCss/AboutUs.css';
 const AboutUsPage = () => {
     return (
         <div>
