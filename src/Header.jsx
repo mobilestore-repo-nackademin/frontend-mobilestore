@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import 'AboutUsPage';
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
       <nav>
         <ul>
           <li><a href="/">Hem</a></li>
-          <li><a href="/kontakt">Om oss</a></li>
+          <li><a href="AboutUsPage">Gå till Om Oss</a></li>
           <li><a href="/om">Mobiltelefoner</a></li>
           <li><a href="/om">Skal</a></li>
           <li><a href="/om">Laddare</a></li>
