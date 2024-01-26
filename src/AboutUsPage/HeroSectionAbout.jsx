@@ -1,6 +1,5 @@
-
 import React from 'react';
-import AboutUsCss from './AboutUsCss/AboutUs.css'
+import './AboutUsCss/AboutUs.css'
 
 
 const AboutUsPage = () => {

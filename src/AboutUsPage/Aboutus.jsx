@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from './HeroSection.jsx';
+import HeroSection from './HeroSectionAbout.jsx';
 
 const Aboutus = () => {
     return (
