@@ -1,24 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 
 const Header = () => {
   return (
     <header>
-        {/* 
-        Lägg en A tagg för att länka till "homepage" sen 
-        Kan även separera Navbar och header. Navbaren kan vara position absolut och header relative. Då följer navbaren med hela tiden.
-        */}
+
       <img className='logo-img-header' src="./photos/mobilestore.png" alt="our-logo" />
       <h1 className='h1-header'>MobileStore</h1>
       <nav>
         <ul>
-          <li><a href="/">Hem</a></li>
-          <li><a href="/AboutUsPage">Gå till Om Oss</a></li>
-          <li><a href="/om">Mobiltelefoner</a></li>
-          <li><a href="/om">Skal</a></li>
-          <li><a href="/om">Laddare</a></li>
-          <li><a href="/Support">Kontakt</a></li>
+          <li><Link to="/">Hem</Link></li>
+          <li><Link to="/Phones">Mobiltelefoner</Link></li>
+          <li><Link to="/Chargers">Laddare</Link></li>
+          <li><Link to="/Cases">Mobilskal</Link></li>
+          <li><Link to="/AboutUs">Om oss</Link></li>
+          <li><Link to="/Support">Kontakt</Link></li>
         </ul>
       </nav>
     </header>
