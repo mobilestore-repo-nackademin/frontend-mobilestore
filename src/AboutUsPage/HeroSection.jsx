@@ -1,15 +1,19 @@
 
 import React from 'react';
+
+import './AboutUsCss/AboutUs.css';
 const AboutUsPage = () => {
     return (
         <div>
+
             <h2>Om Oss</h2>
+
             <img className='Heroimgaboutus' src="../../photos/mobilstore.jpeg" alt="" />
             <img className='Heroimgaboutus2' src="../../photos/Mobilstore.2.jpeg" alt="" />
             <img className='Heroimgaboutus3' src="../../photos/Mobilstore.3.jpeg" alt="" />
             <div className="hero">
-                <a href="/products">Gå till Produktssidan</a>
-                <a href="/Homepage">Gå till Produktssidan</a>
+                <button><a href="/products">Gå till Produktssidan</a></button>
+                <button> <a href="/Homepage">Gå till Huvudsidan</a></button>
 
                 <div className="hero1">
                     <p>
