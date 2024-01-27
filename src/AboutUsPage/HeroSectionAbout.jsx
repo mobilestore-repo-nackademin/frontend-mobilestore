@@ -1,16 +1,22 @@
 import React from 'react';
 import './AboutUsCss/AboutUs.css'
+import { Link } from 'react-router-dom';
 
 const AboutUsPage = () => {
     return (
         <div className='bol'>
             <h2>Om Oss</h2>
+            <div className='button-div-about'>
+           <Link to="/Phones"><button>Gå till Produktssidan</button></Link>
+           <Link to="/"><button>Gå till Huvudsidan</button></Link>
+            </div>
+            <div className='img-div-about'>
             <img className='Heroimgaboutus' src="../../photos/mobilstore.jpeg" alt="" />
             <img className='Heroimgaboutus2' src="../../photos/Mobilstore.2.jpeg" alt="" />
             <img className='Heroimgaboutus3' src="../../photos/Mobilstore.3.jpeg" alt="" />
-            <div className="hero">
-                <button><a href="/products">Gå till Produktssidan</a></button>
-                <button> <a href="/Homepage">Gå till Huvudsidan</a></button>
+            </div>
+            <div className="heroAbout">
+
 
                 <div className="hero1">
                     <p>
@@ -25,7 +31,10 @@ const AboutUsPage = () => {
 
                 </div>
 
+             
+
             </div>
+            
         </div>
 
     );

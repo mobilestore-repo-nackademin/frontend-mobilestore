@@ -1,21 +1,5 @@
 
-/*body{
-    background-color: navajowhite;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: scroll;
-    font-family: 'Arial', sans-serif;
-    color: white;
 
- */
-
-/* .container{
-    max-height: 400px;
-    overflow-y: auto;
-    padding: 20px;
-
-} */
 
 .bol{
     max-width: 800px;
@@ -34,11 +18,11 @@
     transition: transform 0.1s ease;
 
 } */
-h2:hover{
+/* h2:hover{
     transform: translateX(20px );
 
 
-}
+} */
 
 
  /* img {
@@ -50,6 +34,14 @@ h2:hover{
 
 
 } */
+.button-div-about{
+/* Div med knappar */
+}
+.img-div-about{
+/* Div med bilder */
+}
+
+
 img:hover{
     transform: scale(1.1);
 }
