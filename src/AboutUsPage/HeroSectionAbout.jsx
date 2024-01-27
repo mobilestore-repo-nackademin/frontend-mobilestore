@@ -1,17 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD:src/AboutUsPage/HeroSection.jsx
-=======
 import './AboutUsCss/AboutUs.css'
 
->>>>>>> 9c3e06b4b0e2b6216e755a34c7b57e9442ddd50e:src/AboutUsPage/HeroSectionAbout.jsx
-
-import './AboutUsCss/AboutUs.css';
 const AboutUsPage = () => {
     return (
-        <div>
-
+        <div className='bol'>
             <h2>Om Oss</h2>
-
             <img className='Heroimgaboutus' src="../../photos/mobilstore.jpeg" alt="" />
             <img className='Heroimgaboutus2' src="../../photos/Mobilstore.2.jpeg" alt="" />
             <img className='Heroimgaboutus3' src="../../photos/Mobilstore.3.jpeg" alt="" />
