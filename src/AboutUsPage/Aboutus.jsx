@@ -1,10 +1,12 @@
 import React from 'react';
-import HeroSection from './HeroSection.jsx';
+import './AboutUsCss/AboutUs.css';
+import AboutUsPage from "./HeroSectionAbout.jsx";
+
 
 const Aboutus = () => {
     return (
         <div>
-         <HeroSection/>
+            <AboutUsPage />
         </div>
     );
 };

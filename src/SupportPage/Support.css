@@ -1,11 +1,26 @@
 
 
-.support-box {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
+.suppbox{
+    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+    
+}
+
+
+
+
+.support-box1{
+    background-image: url('/photos/support.3.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
   }
   
   .support-box h2 {
@@ -16,3 +31,26 @@
     margin: 0;
   }
   
+  .support-box2{
+    background-image: url('/photos/support.1.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+  }
+
+  .support-box3{
+    background-image: url('/photos/support.5.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
