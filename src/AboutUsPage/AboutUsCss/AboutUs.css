@@ -5,7 +5,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: mediumspringgreen;
+    background-color: beige;
 
 }
 
@@ -33,13 +33,27 @@
     transition: transform 0.3s ease-in-out;
 
 
-} */
-.button-div-about{
-/* Div med knappar */
+
+.button-div-about {
+    display: flex;
+    justify-content: space-between;
 }
-.img-div-about{
-/* Div med bilder */
+
+.button-div-about button {
+    padding: 10px;
+    font-size: 16px;
 }
+
+.button-div-about button:first-child {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.button-div-about button:last-child {
+    background-color: #e74c3c;
+    color: #fff;
+}
+*/
 
 
 img:hover{
@@ -98,6 +112,28 @@ img:hover{
     margin-left: 150px;
 
 }
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #e74c3c;
+}
+
+
+
+
+
+
  /* button{
     background-color: white;
     border-radius: 100em;
