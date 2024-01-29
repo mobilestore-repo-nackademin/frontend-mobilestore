@@ -20,13 +20,13 @@
     height: 8rem;
     width: auto;
   }
-/* Lägg till dessa stilar i din befintliga CSS-fil eller skapa en separat fil för navigationsstilar */
+
 
 .box_bol {
     display: flex;
     flex-direction: column;
-    align-items: normal; /* Centrera länkarna horisontellt */
-    padding: 10px; /* Justera paddingen efter behov */
+    align-items: normal;
+    padding: 10px;
 
 }
 
