@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './ProductsCss/ProductList.css';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -19,25 +20,20 @@ const ProductList = () => {
   }, []); // Tomt beroendearrayer betyder att detta körs en gång vid montering
 
   return (
-    <div>
-      <h2>Produkter</h2>
-      <ul>
-        {products.map(product => {
-          console.log('Product object:', product); // Lägg till detta logguttryck
-          const attributes = product.attributes || {};
-          const photos = attributes.Photos || {};
-          const photoData = photos.data || {};
-  
-          return (
-            <li key={product.id}>
-              {photoData.url && <img src={`http://localhost:1337${photoData.url}`} alt={attributes.Title} />}
-              <h3>{attributes.Title}</h3>
-              <p>{attributes.Description}</p>
-              <p>Pris: {attributes.Price} kr</p>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="product-list">
+      {products.map(product => {
+        const attributes = product.attributes || {};
+        const photoData = attributes.Photos.data.attributes || {};
+
+        return (
+          <div key={product.id} className="product-card">
+            {photoData.url && <img src={`http://localhost:1337${photoData.url}`} alt={attributes.Title} />}
+            <h3>{attributes.Title}</h3>
+            <p>{attributes.Description}</p>
+            <p>Pris: {attributes.Price} kr</p>
+          </div>
+        );
+      })}
     </div>
   );
 };
