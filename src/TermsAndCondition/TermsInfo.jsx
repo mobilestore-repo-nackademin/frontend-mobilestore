@@ -1,4 +1,4 @@
-
+import './TermsInfo.css';
 import React from 'react';
 
 

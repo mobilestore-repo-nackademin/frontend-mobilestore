@@ -1,4 +1,4 @@
-
+import './DeliveryInfo.css';
 import React from 'react';
 
 const DeliveryTerms = () => {

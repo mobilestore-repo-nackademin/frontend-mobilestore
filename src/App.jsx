@@ -8,7 +8,9 @@ import Cases from './Cases/Cases.jsx';
 import Phones from './Phone/Phonepage.jsx';
 import Support from './SupportPage/SupportPage.jsx';
 import AboutUs from './AboutUsPage/Aboutus.jsx';
-import MainComponent from "./MainComponent/MainComponents.jsx";
+import ProductList from './Products/Products.jsx';
+import Terms from './TermsAndCondition/TermsAndConditions.jsx';
+import Delivery from './DeliveryPage/Delivery.jsx';
 
 const App = () => {
   return (
@@ -21,7 +23,9 @@ const App = () => {
         <Route path="/Cases" element={<Cases />} />
         <Route path="/Support" element={<Support />} />
         <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/MainComponent" element={<MainComponent/>}/>
+        <Route path="/Products" element={<ProductList />} />
+        <Route path="/Terms" element={<Terms/>}/>
+        <Route path="/Delivery" element={<Delivery/>}/>
 
       </Routes>
       <Footer/>

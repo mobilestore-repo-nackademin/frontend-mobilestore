@@ -11,17 +11,6 @@ const Footer = () => {
         <h2>MobileStore</h2>
         <img className='footer-img' src="./photos/mobilestore.png" alt="ourlogo" />
       </div>
-        <div className="box_bol">
-            <nav>
-                <ul>
-                    <li><Link to="/purchase-terms">Köpvillkor</Link></li>
-                    <li><Link to="/delivery-terms">Leveransvillkor</Link></li>
-                    <li><Link to="/about-us">Om Butiken</Link></li>
-                </ul>
-
-            </nav>
-        </div>
-
       <div className="column">
 
         <ul>
