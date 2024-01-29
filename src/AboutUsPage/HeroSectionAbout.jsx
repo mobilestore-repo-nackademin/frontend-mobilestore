@@ -17,8 +17,6 @@ const AboutUsPage = () => {
             <img className='Heroimgaboutus3' src="../../photos/Mobilstore.3.jpeg" alt="" />
             </div>
             <div className="heroAbout">
-
-
                 <div className="hero1">
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -32,9 +30,7 @@ const AboutUsPage = () => {
 
                 </div>
             </div>
-            
         </div>
-
     );
 };
 

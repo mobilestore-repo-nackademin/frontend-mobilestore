@@ -17,6 +17,7 @@ const Header = () => {
           <li><Link to="/Cases">Mobilskal</Link></li>
           <li><Link to="/AboutUs">Om oss</Link></li>
           <li><Link to="/Support">Kontakt</Link></li>
+          <li><Link to="/Products">Produkter</Link></li>
         </ul>
       </nav>
     </header>

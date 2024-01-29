@@ -8,6 +8,7 @@ import Cases from './Cases/Cases.jsx';
 import Phones from './Phone/Phonepage.jsx';
 import Support from './SupportPage/SupportPage.jsx';
 import AboutUs from './AboutUsPage/Aboutus.jsx';
+import ProductList from './Products/Products.jsx';
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
         <Route path="/Cases" element={<Cases />} />
         <Route path="/Support" element={<Support />} />
         <Route path="/AboutUs" element={<AboutUs />} />
-
+        <Route path="/Products" element={<ProductList />} />
       </Routes>
       <Footer/>
     </Router>
