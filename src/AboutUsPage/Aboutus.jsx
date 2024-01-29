@@ -1,14 +1,14 @@
 import React from 'react';
 import './AboutUsCss/AboutUs.css';
 import AboutUsPage from "./HeroSectionAbout.jsx";
-import App from "../App.jsx";
+import SocialIcons from "./SocialIcons.jsx";
 
 
 const Aboutus = () => {
     return (
         <div>
-            <AboutUsPage />
-            <App/>
+            <AboutUsPage />      
+            <SocialIcons/>  
         </div>
     );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import SocialIcons from "./SocialIcons.jsx";
 import './AboutUsCss/AboutUs.css'
 import { Link } from 'react-router-dom';
 
@@ -32,11 +31,6 @@ const AboutUsPage = () => {
                     </p>
 
                 </div>
-
-                <SocialIcons/>
-
-             
-
             </div>
             
         </div>
