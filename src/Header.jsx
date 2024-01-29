@@ -9,6 +9,7 @@ const Header = () => {
 
       <img className='logo-img-header' src="./photos/mobilestore.png" alt="our-logo" />
       <h1 className='h1-header'>MobileStore</h1>
+
       <nav>
         <ul>
           <li><Link to="/">Hem</Link></li>
@@ -18,6 +19,9 @@ const Header = () => {
           <li><Link to="/AboutUs">Om oss</Link></li>
           <li><Link to="/Support">Kontakt</Link></li>
           <li><Link to="/Products">Produkter</Link></li>
+          <li><Link to="/Terms">Terms</Link></li>
+          <li><Link to="/Delivery">Delivery</Link></li>
+
         </ul>
       </nav>
     </header>

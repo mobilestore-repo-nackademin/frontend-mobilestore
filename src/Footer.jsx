@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import {Link} from "react-router-dom";
+
 
 const Footer = () => {
     return (
@@ -10,6 +12,7 @@ const Footer = () => {
         <img className='footer-img' src="./photos/mobilestore.png" alt="ourlogo" />
       </div>
       <div className="column">
+
         <ul>
             {/* Sätt in A tagg på alla länkar */}
             <li>FAQ</li>

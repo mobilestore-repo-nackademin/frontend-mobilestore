@@ -22,17 +22,17 @@
     transform: translateX(20px );
 
 
-} */
+}
 
 
- /* img {
+  img {
     max-width: 100%;
     height: auto;
     margin-top: 5px;
     display: inline-block;
     transition: transform 0.3s ease-in-out;
 
-
+*/
 
 .button-div-about {
     display: flex;
@@ -46,14 +46,14 @@
 
 .button-div-about button:first-child {
     background-color: #3498db;
-    color: #fff;
+    color: navajowhite;
 }
 
 .button-div-about button:last-child {
-    background-color: #e74c3c;
-    color: #fff;
+    background-color: #007bff;
+    color: beige;
 }
-*/
+
 
 
 img:hover{

@@ -9,6 +9,8 @@ import Phones from './Phone/Phonepage.jsx';
 import Support from './SupportPage/SupportPage.jsx';
 import AboutUs from './AboutUsPage/Aboutus.jsx';
 import ProductList from './Products/Products.jsx';
+import Terms from './TermsAndCondition/TermsAndConditions.jsx';
+import Delivery from './DeliveryPage/Delivery.jsx';
 
 const App = () => {
   return (
@@ -22,6 +24,9 @@ const App = () => {
         <Route path="/Support" element={<Support />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Products" element={<ProductList />} />
+        <Route path="/Terms" element={<Terms/>}/>
+        <Route path="/Delivery" element={<Delivery/>}/>
+
       </Routes>
       <Footer/>
     </Router>
