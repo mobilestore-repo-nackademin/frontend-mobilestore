@@ -7,7 +7,6 @@ const Delivery = () => {
     return (
         <div>
             <DeliveryPage />      
-           
         </div>
     );
 };
