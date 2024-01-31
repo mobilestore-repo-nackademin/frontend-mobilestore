@@ -2,7 +2,7 @@
 
 
 .bol{
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: beige;
@@ -36,13 +36,31 @@
 
 .button-div-about {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .button-div-about button {
     padding: 10px;
-    font-size: 16px;
+    margin: 5px;
+    border-radius: 10px;
+    /* Övrig styling för knappen */
+
+
+    background-color: #3498db;
+    color: #ffffff;
+    border: 1px solid #3498db;
+
+    /* Hover-tillstånd */
+    transition: background-color 0.3s ease;
 }
+
+.button-div-about button:hover {
+    background-color: #2980b9;
+    border: 1px solid #2980b9;
+}
+
+
 
 .button-div-about button:first-child {
     background-color: #3498db;
