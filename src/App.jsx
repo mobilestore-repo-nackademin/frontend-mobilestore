@@ -18,13 +18,17 @@ import ChosePayment from './PaymentComponents/ChosePayment.jsx';
 import ConfirmedPage from './PaymentComponents/ConfirmedPage.jsx';
 import InvoicePayment from './PaymentComponents/InvoicePayment.jsx';
 import ShoppingCartPage from './PaymentComponents/ShoppingCartPage.jsx';
+import HomeDelivery from './PaymentComponents/HomeDelivery.jsx';
+import { FormDataProvider } from './Context/FormDataContext.jsx';
 
 const App = () => {
   return (
     <Router>
       <Header/>
       <Navbar/>
+      <FormDataProvider>
       <Routes>
+      
         <Route path="/" element={<Home />} />
         <Route path="/Phones" element={<Phones />} />
         <Route path="/Chargers" element={<Chargers />} />
@@ -40,7 +44,10 @@ const App = () => {
         <Route path="/ConfirmedPage" element={<ConfirmedPage/>}/>
         <Route path="/InvoicePayment" element={<InvoicePayment/>}/>
         <Route path="/ShoppingCartPage" element={<ShoppingCartPage/>}/>
+        <Route path="/HomeDelivery" element={<HomeDelivery/>}/>
       </Routes>
+      </FormDataProvider>
+
       <Footer/>
     </Router>
   );

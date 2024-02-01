@@ -1,10 +1,12 @@
-// InvoicePayment.js
+// HomeDelivery.js
 import React from 'react';
 import './Payment.css';
 import { useFormData } from '../Context/FormDataContext';
+import {Link} from "react-router-dom";
 
-const InvoicePayment = () => {
-  const { formData: invoiceFormData, updateFormData } = useFormData();
+
+const HomeDelivery = () => {
+  const { formData: homeDeliveryFormData, updateFormData } = useFormData();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,20 +16,11 @@ const InvoicePayment = () => {
     }));
   };
 
-  const fillWithDeliveryData = () => {
-    // Fyll formuläret med data från hemleveransformuläret
-    updateFormData({
-      name: homeDeliveryFormData.name,
-      street: homeDeliveryFormData.street,
-      city: homeDeliveryFormData.city,
-      zipcode: homeDeliveryFormData.zipcode,
-      phoneNumber: homeDeliveryFormData.phoneNumber,
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Skicka formData till nästa sida eller utför önskad åtgärd här
+    // Sparar hemleveransformulärdatan till en variabel
+    // Du kan göra mer här, t.ex. skicka datan till en server
+    const homeDeliveryData = { ...homeDeliveryFormData };
   };
 
   return (
@@ -40,7 +33,7 @@ const InvoicePayment = () => {
             type="text"
             id="name"
             name="name"
-            value={invoiceFormData.name}
+            value={homeDeliveryFormData.name}
             onChange={handleChange}
             required
           />
@@ -51,7 +44,7 @@ const InvoicePayment = () => {
             type="text"
             id="street"
             name="street"
-            value={invoiceFormData.street}
+            value={homeDeliveryFormData.street}
             onChange={handleChange}
             required
           />
@@ -62,7 +55,7 @@ const InvoicePayment = () => {
             type="text"
             id="city"
             name="city"
-            value={invoiceFormData.city}
+            value={homeDeliveryFormData.city}
             onChange={handleChange}
             required
           />
@@ -73,7 +66,7 @@ const InvoicePayment = () => {
             type="text"
             id="zipcode"
             name="zipcode"
-            value={invoiceFormData.zipcode}
+            value={homeDeliveryFormData.zipcode}
             onChange={handleChange}
             required
           />
@@ -84,18 +77,16 @@ const InvoicePayment = () => {
             type="tel"
             id="phoneNumber"
             name="phoneNumber"
-            value={invoiceFormData.phoneNumber}
+            value={homeDeliveryFormData.phoneNumber}
             onChange={handleChange}
             required
           />
         </div>
-        <button type="button" onClick={fillWithDeliveryData}>
-          Samma som Leverans
-        </button>
-        <button type="submit">Gå vidare</button>
+     
+      <Link to="/ChosePayment">   <button type="submit">Gå vidare</button></Link>
       </form>
     </div>
   );
 };
 
-export default InvoicePayment;
+export default HomeDelivery;
