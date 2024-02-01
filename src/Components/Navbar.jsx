@@ -15,13 +15,16 @@ const Navbar = () => {
           <li><Link to="/Products">Produkter</Link></li>
           <li><Link to="/Terms">Terms</Link></li>
           <li><Link to="/Delivery">Delivery</Link></li>
+
           {/* Kasta nedan sen*/}
-          <li><Link to="/CardPayment">Kort</Link></li>
+          <li><Link to="/ShoppingCartPage">kassa</Link></li>
           <li><Link to="/ChoseDelivery">Leverans</Link></li>
           <li><Link to="/ChosePayment">Betalsätt</Link></li>
-          <li><Link to="/ConfirmedPage">Bekräftelse</Link></li>
+          <li><Link to="/CardPayment">Kort</Link></li>
           <li><Link to="/InvoicePayment">Faktura</Link></li>
-          <li><Link to="/ShoppingCartPage">kassa</Link></li>
+          <li><Link to="/ConfirmedPage">Bekräftelse</Link></li>
+          
+          
           
         </ul>
       </nav>
