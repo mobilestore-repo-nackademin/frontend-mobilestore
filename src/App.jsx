@@ -17,7 +17,7 @@ import ChoseDelivery from './PaymentComponents/ChoseDelivery.jsx';
 import ChosePayment from './PaymentComponents/ChosePayment.jsx';
 import ConfirmedPage from './PaymentComponents/ConfirmedPage.jsx';
 import InvoicePayment from './PaymentComponents/InvoicePayment.jsx';
-import ShoppingCartPage from './PaymentComponents/ChosePayment.jsx';
+import ShoppingCartPage from './PaymentComponents/ShoppingCartPage.jsx';
 
 const App = () => {
   return (

@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const ShoppingCartPage = () => {
     return (
         <div>
-            {/* Alla produkter */}
+            <h1>ALla produkter man köpt</h1>
         <button>Cancel</button> <button>Confirm Go To Payment</button>
         </div>
     );
