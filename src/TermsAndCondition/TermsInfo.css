@@ -76,60 +76,8 @@
 
 
 }
-@media (max-width: 768px) {
-    .term-section {
-        width: 100%;
-        margin-right: 0;
-    }
-}
-term-intro {
-    margin-right: 0;
-}
 
-.term-heading {
-    font-size: 16px;
-}
 
-.term-section:hover {
-    background-color: #f8f8f8;
-}
 
-@media (max-width: 480px) {
-    .term-section {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
 
-    .term-heading {
-        font-size: 14px;
-    }
-
-    .term-intro {
-        font-size: 14px;
-    }
-
-    .with-icon h2 {
-        font-size: 14px;
-    }
-}
-@media (max-width:1200px) {
-    .term-section {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .term-heading {
-        font-size: 14px;
-    }
-
-    .term-intro {
-        font-size: 14px;
-    }
-
-    .with-icon h2 {
-        font-size: 14px;
-    }
-}
 
