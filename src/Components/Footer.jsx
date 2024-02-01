@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import '../CssFolder/Footer.css'
 import {Link} from "react-router-dom";
 
 
@@ -8,7 +8,6 @@ const Footer = () => {
 
     <footer className="footer">
       <div className="column">
-        <h2>MobileStore</h2>
         <img className='footer-img' src="./photos/mobilestore.png" alt="ourlogo" />
       </div>
       <div className="column">
@@ -26,7 +25,6 @@ const Footer = () => {
         <h2>Mobilestore</h2>
         <h4>Address</h4>
         <p>Blabla vägen 2, Stockholm</p>
-
       </div>
     </footer>
     );
