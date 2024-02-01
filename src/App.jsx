@@ -11,7 +11,8 @@ import AboutUs from './AboutUsPage/Aboutus.jsx';
 import ProductList from './Products/Products.jsx';
 import Terms from './TermsAndCondition/TermsAndConditions.jsx';
 import Delivery from './DeliveryPage/Delivery.jsx';
-
+import FAQ from './FAQPage/FAQ.jsx';
+import BytenReturer from './BytenReturerPage/BytenReturer.jsx';
 const App = () => {
   return (
     <Router>
@@ -26,6 +27,8 @@ const App = () => {
         <Route path="/Products" element={<ProductList />} />
         <Route path="/Terms" element={<Terms/>}/>
         <Route path="/Delivery" element={<Delivery/>}/>
+        <Route path="FAQ" element={<FAQ/>}/>
+        <Route path="BytenReturer" element={<BytenReturer/>}/>
 
       </Routes>
       <Footer/>

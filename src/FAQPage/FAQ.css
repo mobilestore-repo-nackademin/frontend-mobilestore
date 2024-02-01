@@ -1,0 +1,31 @@
+
+  
+  .faq-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .faq-card {
+    width: 23%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  .faq-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .faq-card p {
+    margin-bottom: 10px;
+  }
+  
+  .faq-card p:last-child {
+    margin-bottom: 0;
+  }
+  
