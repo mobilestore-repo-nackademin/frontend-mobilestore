@@ -10,35 +10,33 @@ const PurchaseTerms = () => {
             </p>
 
             <div className="term-section with-icon">
-                <h2><img src="../../photos/oder-icon.jpeg" alt="" /> Beställning</h2>
+                <h3><img src="../../photos/oder-icon.jpeg" alt="" /> Beställning</h3>
                 <p>
                     Du kan enkelt placera en beställning genom vår användarvänliga webbplats. Genom att göra en beställning godkänner du våra köpvillkor och förbinder dig att betala det totala beloppet för din beställning.
                 </p>
             </div>
 
             <div className="term-section with-icon">
-                <h2><img src="../../photos/payment-icon.png" alt="" /> Betalning</h2>
+                <h3><img src="../../photos/payment-icon.png" alt="" /> Betalning</h3>
                 <p>
                     Alla priser anges i lokal valuta och inkluderar skatter. Betalning kan göras med olika bekväma betalningsmetoder som anges vid kassan. Observera att vi förbehåller oss rätten att ändra priser och betalningsmetoder när som helst.
                 </p>
             </div>
 
             <div className="term-section with-icon">
-                <h2><img src="../../photos/return-icon.png" alt="Return Icon" /> Ångerrätt</h2>
+                <h3><img src="../../photos/return-icon.png" alt="Return Icon" /> Ångerrätt</h3>
                 <p>
                     Vi förstår att behov kan förändras. Därför erbjuder vi dig rätten att ångra ditt köp inom 14 dagar från mottagandet av varorna. Kontakta vår dedikerade kundtjänst för att inleda returprocessen. Besök även vår returpolicy för ytterligare information.
                 </p>
             </div>
 
             <div className="term-section with-icon">
-                <h2><img src="../../photos/delivery-icon.png" alt="Delivery Icon" /> Leverans</h2>
+                <h3><img src="../../photos/delivery-icon.png" alt="Delivery Icon" /> Leverans</h3>
                 <p>
                     Leveransvaraktigheten och kostnaden varierar beroende på din leveransadress och valda leveransmetod. Utforska våra leveransvillkor för detaljerad information om hur vi ser till att dina produkter når dig säkert och snabbt.
                 </p>
             </div>
-                <div>
-                    <img className="terms-icon" src="../../photos/terms-icon.png" alt=""/>
-                </div>
+
             <div className="term-section with-icon">
                 <h2><img src="../../photos/support-icon-55.png" alt="Support Icon" /> Kundtjänst</h2>
                 <p>
