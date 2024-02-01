@@ -1,17 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
-
-
-const Header = () => {
+import '../CssFolder/Navbar.css'
+const Navbar = () => {
   return (
-    <header>
 
-      <img className='logo-img-header' src="./photos/mobilestore.png" alt="our-logo" />
-      <h1 className='h1-header'>MobileStore</h1>
-
-      <nav>
-        <ul>
+      <nav className="nav-container">
+        <ul className="nav-list">
           <li><Link to="/">Hem</Link></li>
           <li><Link to="/Phones">Mobiltelefoner</Link></li>
           <li><Link to="/Chargers">Laddare</Link></li>
@@ -21,12 +15,19 @@ const Header = () => {
           <li><Link to="/Products">Produkter</Link></li>
           <li><Link to="/Terms">Terms</Link></li>
           <li><Link to="/Delivery">Delivery</Link></li>
-
+          {/* Kasta nedan sen*/}
+          <li><Link to="/CardPayment">Kort</Link></li>
+          <li><Link to="/ChoseDelivery">Leverans</Link></li>
+          <li><Link to="/ChosePayment">Betalsätt</Link></li>
+          <li><Link to="/ConfirmedPage">Bekräftelse</Link></li>
+          <li><Link to="/InvoicePayment">Faktura</Link></li>
+          <li><Link to="/ShoppingCartPage">kassa</Link></li>
+          
         </ul>
       </nav>
-    </header>
+      
+
   );
 };
 
-export default Header;
-
+export default Navbar;

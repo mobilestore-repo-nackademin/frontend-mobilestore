@@ -1,0 +1,41 @@
+.header-container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(16, 26, 41, 255);
+}
+
+.logo-container {
+  grid-column: 1 / span 1; /* Ta upp 2 kolumner från första kolumnen */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.logo-img-header{
+margin-left: 2em;
+width: 7em;
+height: auto;
+}
+
+
+.emptySpaceContainer {
+  grid-column: 2 / span 1; /* Ta upp 1 kolumn från andra kolumnen */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrera innehållet horisontellt */
+}
+
+.h1-header {
+  text-align: center; /* Om du vill använda text-align för säkerhets skull */
+  color: #fff;
+}
+
+.cartContainer{
+  grid-column: 3 / span 1; /* Ta upp 1 kolumn från andra kolumnen */
+  display: flex;
+  align-items: center;
+  justify-content:left;
+}
+
