@@ -1,10 +1,10 @@
-// InvoicePayment.js
 import React from 'react';
-import './Payment.css';
-import { useFormData } from '../Context/FormDataContext';
+import { Link } from 'react-router-dom';
+import useFormData from '../Context/useFormData.jsx';
 
 const InvoicePayment = () => {
-  const { formData: invoiceFormData, updateFormData } = useFormData();
+  const { formData, updateFormData } = useFormData();
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -12,35 +12,20 @@ const InvoicePayment = () => {
       ...prevData,
       [name]: value,
     }));
+    console.log("Form data updated:", formData);
   };
-
-  const fillWithDeliveryData = () => {
-    // Fyll formuläret med data från hemleveransformuläret
-    updateFormData({
-      name: homeDeliveryFormData.name,
-      street: homeDeliveryFormData.street,
-      city: homeDeliveryFormData.city,
-      zipcode: homeDeliveryFormData.zipcode,
-      phoneNumber: homeDeliveryFormData.phoneNumber,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Skicka formData till nästa sida eller utför önskad åtgärd här
-  };
-
+  console.log("Form data on InvoicePayment:", formData);
   return (
-    <div className='Information-div'>
+    <div className="container">
       <h2>Fyll i dina uppgifter</h2>
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className="form-group">
           <label htmlFor="name">Namn:</label>
           <input
             type="text"
             id="name"
             name="name"
-            value={invoiceFormData.name}
+            value={formData.name}
             onChange={handleChange}
             required
           />
@@ -51,7 +36,7 @@ const InvoicePayment = () => {
             type="text"
             id="street"
             name="street"
-            value={invoiceFormData.street}
+            value={formData.street}
             onChange={handleChange}
             required
           />
@@ -62,7 +47,7 @@ const InvoicePayment = () => {
             type="text"
             id="city"
             name="city"
-            value={invoiceFormData.city}
+            value={formData.city}
             onChange={handleChange}
             required
           />
@@ -73,27 +58,26 @@ const InvoicePayment = () => {
             type="text"
             id="zipcode"
             name="zipcode"
-            value={invoiceFormData.zipcode}
+            value={formData.zipcode}
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phoneNumber">Telefonnummer:</label>
+          <label htmlFor="personalNumber">Personnummer:</label>
           <input
-            type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={invoiceFormData.phoneNumber}
+            type="text"
+            id="personalNumber"
+            name="personalNumber"
+            value={formData.personalNumber}
             onChange={handleChange}
             required
           />
         </div>
-        <button type="button" onClick={fillWithDeliveryData}>
-          Samma som Leverans
-        </button>
-        <button type="submit">Gå vidare</button>
       </form>
+      <Link to="/ConfirmedPage" >
+        <button>Gå vidare</button>
+      </Link>
     </div>
   );
 };

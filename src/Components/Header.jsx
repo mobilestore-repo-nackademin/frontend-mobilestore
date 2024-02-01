@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CssFolder/Header.css'
-import Cart from './CartIcon';
+import CartIcon from './CartIcon';
 
 const Header = () => {
   return (
@@ -14,7 +14,7 @@ const Header = () => {
         <h1 className='h1-header'>MobileStore</h1>
       </div>
       <div className='cartContainer'>
-        <Cart/>
+        <CartIcon/>
       </div>
     </header>
   );

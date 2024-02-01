@@ -1,16 +1,17 @@
-// HomeDelivery.js
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Payment.css';
-import { useFormData } from '../Context/FormDataContext';
-import {Link} from "react-router-dom";
-
-
-const HomeDelivery = () => {
-  const { formData: homeDeliveryFormData, updateFormData } = useFormData();
+const AddressForm = () => {
+  const [formData, setFormData] = useState({
+    address: '',
+    city: '',
+    zipCode: '',
+    selectedOption: 'option1', // Välj en standardval
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    updateFormData((prevData) => ({
+    setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -18,33 +19,21 @@ const HomeDelivery = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Sparar hemleveransformulärdatan till en variabel
-    // Du kan göra mer här, t.ex. skicka datan till en server
-    const homeDeliveryData = { ...homeDeliveryFormData };
+    // Hantera formulärinskickning här
+    console.log(formData);
   };
 
   return (
-    <div className='Information-div'>
+    <div>
       <h2>Fyll i dina uppgifter</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Namn:</label>
+          <label htmlFor="address">Adress:</label>
           <input
             type="text"
-            id="name"
-            name="name"
-            value={homeDeliveryFormData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="street">Gata:</label>
-          <input
-            type="text"
-            id="street"
-            name="street"
-            value={homeDeliveryFormData.street}
+            id="address"
+            name="address"
+            value={formData.address}
             onChange={handleChange}
             required
           />
@@ -55,38 +44,40 @@ const HomeDelivery = () => {
             type="text"
             id="city"
             name="city"
-            value={homeDeliveryFormData.city}
+            value={formData.city}
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="zipcode">Postnummer:</label>
+          <label htmlFor="zipCode">Postnummer:</label>
           <input
             type="text"
-            id="zipcode"
-            name="zipcode"
-            value={homeDeliveryFormData.zipcode}
+            id="zipCode"
+            name="zipCode"
+            value={formData.zipCode}
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="phoneNumber">Telefonnummer:</label>
-          <input
-            type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={homeDeliveryFormData.phoneNumber}
+          <label htmlFor="selectedOption">Välj ett alternativ:</label>
+          <select
+            id="selectedOption"
+            name="selectedOption"
+            value={formData.selectedOption}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="option1">09:00 - 12:00</option>
+            <option value="option2">13:00 - 16:00</option>
+            <option value="option3">16:00 - 19:00</option>
+          </select>
         </div>
-     
-      <Link to="/ChosePayment">   <button type="submit">Gå vidare</button></Link>
+       <Link to="/ChosePayment"> <button type="submit">Gå vidare</button></Link>
       </form>
     </div>
   );
 };
 
-export default HomeDelivery;
+export default AddressForm;

@@ -1,15 +1,23 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import './Payment.css';
 
 
 const ShoppingCartPage = () => {
     return (
-        <div>
-            <h1>Alla produkter man köpt</h1>
-        
-         <Link to="/ChoseDelivery"><button>Välj leveranssätt</button></Link> 
-         <Link to="/Products"><button>Cancel</button></Link>
+      <div className="container">
+      <h1 className='thx'>Varukorg
+
+      </h1>
+
+      <div className="grid-confirm">
+        <div className="grid-confirm-item">
+          <strong>Produkter</strong> <br />
+          
+          <Link to="/"><button>Handla mer</button></Link> <Link to="/ChoseDelivery"><button>Välj leveranssätt</button></Link>
         </div>
+   
+      </div></div>
     );
   };
 

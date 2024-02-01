@@ -55,3 +55,35 @@
     text-align: center;
     
   }
+  .grid-confirm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Rutor kommer att fylla bredden och fördelas jämnt mellan varje rad */
+    gap: 16px; /* Avstånd mellan rutorna */
+  }
+  
+  .grid-confirm-item {
+    width: calc(50% - 8px); /* 50% bredd minus hälften av avståndet för att skapa två rutor per rad */
+    background-color: #ccc;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Hela skärmens höjd */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .thx {
+
+    display: flex;
+    flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centrera texten horisontellt */
+  }

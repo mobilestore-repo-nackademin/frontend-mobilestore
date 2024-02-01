@@ -17,7 +17,7 @@ const Navbar = () => {
           <li><Link to="/Delivery">Delivery</Link></li>
 
           {/* Kasta nedan sen*/}
-          <li><Link to="/ShoppingCartPage">kassa</Link></li>
+          <li><Link to="/ShoppingCartPage">Kassa</Link></li>
           <li><Link to="/ChoseDelivery">Leverans</Link></li>
           <li><Link to="/ChosePayment">Betalsätt</Link></li>
           <li><Link to="/CardPayment">Kort</Link></li>

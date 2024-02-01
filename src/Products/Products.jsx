@@ -8,16 +8,20 @@ const ProductList = () => {
   const fetchProducts = async () => {
     try {
       const response = await axios.get('http://localhost:1337/api/products?populate=*');
-      console.log(response.data);  // Lägg till denna rad för felsökning
+      console.log(response.data);
       setProducts(response.data.data);
     } catch (error) {
       console.error('Error fetching products:', error);
     }
   };
 
+  const addToCart = (product) => {
+    console.log(`Added to cart: ${product.attributes.Title}`);
+  };
+
   useEffect(() => {
-    fetchProducts(); // Anropa fetchProducts när komponenten monteras
-  }, []); // Tomt beroendearrayer betyder att detta körs en gång vid montering
+    fetchProducts();
+  }, []);
 
   return (
     <div className="product-list">
@@ -31,6 +35,7 @@ const ProductList = () => {
             <h3>{attributes.Title}</h3>
             <p>{attributes.Description}</p>
             <p>Pris: {attributes.Price} kr</p>
+            <button onClick={() => addToCart(product)}>Köp</button>
           </div>
         );
       })}
