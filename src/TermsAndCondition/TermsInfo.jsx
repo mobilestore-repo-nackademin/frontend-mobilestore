@@ -4,7 +4,10 @@ import React from 'react';
 const PurchaseTerms = () => {
     return (
         <div className="term">
-
+            <h6 className="term-heading">Välkommen till våra Köpvillkor</h6>
+            <p className="term-intro">
+                Utforska våra villkor för en smidig och trygg köpupplevelse. Här är vad du behöver veta:
+            </p>
 
             <div className="term-section with-icon">
                 <h2><img src="../../photos/oder-icon.jpeg" alt="" /> Beställning</h2>
@@ -33,7 +36,9 @@ const PurchaseTerms = () => {
                     Leveransvaraktigheten och kostnaden varierar beroende på din leveransadress och valda leveransmetod. Utforska våra leveransvillkor för detaljerad information om hur vi ser till att dina produkter når dig säkert och snabbt.
                 </p>
             </div>
-
+                <div>
+                    <img className="terms-icon" src="../../photos/terms-icon.png" alt=""/>
+                </div>
             <div className="term-section with-icon">
                 <h2><img src="../../photos/support-icon-55.png" alt="Support Icon" /> Kundtjänst</h2>
                 <p>

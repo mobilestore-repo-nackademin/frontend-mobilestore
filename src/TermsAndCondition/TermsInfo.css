@@ -5,35 +5,41 @@
     justify-content: space-between;
     gap: 20px;
 
+
 }
-
 .term-heading {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-left: 10px;
 
 }
 
 .term-intro {
+    display: block;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-top: -45px;
+    margin-right:135px;
+    margin-left: 10px;
 }
+
 
 .term-section {
     background-color: #f8f8f8;
-    padding: 15px;
+    padding: 8px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: calc(20% - 20px);
+    width: calc(32% - 5px);
     border: 1px solid #dddddd;
     justify-content: flex-start;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
 
 }
+
 
 .term-section:hover {
     background-color: #e0e0e0;
@@ -63,4 +69,15 @@
 .term-section h2 {
     margin: 0;
 }
+.terms-icon{
+    width: 100%;
+    height: 70%;
+    margin-top: 100px;
+
+
+}
+
+
+
+
 
