@@ -6,10 +6,7 @@ import './DeliveryInfo.css';
 const DeliveryTerms = () => {
     return (
         <div className="deliver">
-            <div className="delivery-header">
-                <h3 className="delivery-heading">Leveransvillkor</h3>
-                <img className='handslag' src="../../photos/handslag.png" alt="Handslag"/>
-            </div>
+
 
             <div className="delivery-info">
                 <h5>1. Leveranstid</h5>
@@ -39,6 +36,7 @@ const DeliveryTerms = () => {
             <div>
                 <img className= 'delivery-photo' src="../../photos/delivery-photo.jpg" alt=""/>
             </div>
+
         </div>
     );
 };
