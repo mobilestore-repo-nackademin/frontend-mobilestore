@@ -1,13 +1,66 @@
 
 .term {
-    font-family: 'Poppins', sans-serif;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 
 }
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 16px;
+
+.term-heading {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
 }
+
+.term-intro {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.term-section {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 20px);
+    border: 1px solid #dddddd;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.term-section:hover {
+    background-color: #e0e0e0;
+}
+
+.with-icon {
+    display: flex;
+    align-items: center;
+}
+
+.with-icon h2 {
+    margin-left: 10px;
+
+}
+
+.with-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.term-section p {
+    font-size: 14px;
+    color: #444;
+    margin-top: 10px
+
+}
+.term-section h2 {
+    margin: 0;
+}
+

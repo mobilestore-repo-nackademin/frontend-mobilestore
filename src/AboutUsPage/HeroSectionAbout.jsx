@@ -7,10 +7,6 @@ const AboutUsPage = () => {
     return (
         <div className='bol'>
             <h2>Om Oss</h2>
-            <div className='button-div-about'>
-                <Link to="/"><button>Gå till Huvudsidan</button></Link>
-                 <Link to="/Phones"><button>Gå till Produktssidan</button></Link>
-            </div>
             <div className='img-div-about'>
             <img className='Heroimgaboutus' src="../../photos/mobilstore.jpeg" alt="" />
             <img className='Heroimgaboutus2' src="../../photos/Mobilstore.2.jpeg" alt="" />
