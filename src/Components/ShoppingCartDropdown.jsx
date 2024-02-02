@@ -1,6 +1,7 @@
 import React from 'react';
 import '../CssFolder/shoppingcart.css'
 
+// eslint-disable-next-line react/prop-types
 const ShoppingCartDropdown = ({ cartItems }) => {
   // Implementera logik för varukorgen här
   return (
