@@ -244,6 +244,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import {Link} from "react-router-dom";
 
 const PaymentPage = () => {
     const [cardHolderName, setCardHolderName] = useState('');
@@ -251,6 +252,8 @@ const PaymentPage = () => {
     const [expiryMonthYear, setExpiryMonthYear] = useState('');
     const [cvv, setCVV] = useState('');
     const [expiryOption, setExpiryOption] = useState('12');
+
+
 
 
 
@@ -356,14 +359,18 @@ const PaymentPage = () => {
                 </label>
 
                 <br />
+                <Link to="/ConfirmedPage">
+                    <button type="button" onClick={handlePaymentSubmit}>
+                        Bekräfta betalning
+                    </button>
 
-                <button type="button" onClick={handlePaymentSubmit}>
-                    Bekräfta betalning
-                </button>
-
+                </Link>
                 <img className='betalning-icon' src="../../photos/betalnings.jpg" alt="" />
 
             </form>
+
+
+
         </div>
     );
 };
