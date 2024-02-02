@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
+import Header from './Components/Header.jsx';
+import Navbar from './Components/Navbar.jsx';
+import Footer from './Components/Footer.jsx';
 import Home from './Homepage/Homepage.jsx';
 import Chargers from './Chargers/Charger.jsx';
 import Cases from './Cases/Cases.jsx';
@@ -11,13 +12,23 @@ import AboutUs from './AboutUsPage/Aboutus.jsx';
 import ProductList from './Products/Products.jsx';
 import Terms from './TermsAndCondition/TermsAndConditions.jsx';
 import Delivery from './DeliveryPage/Delivery.jsx';
+import CardPayment from './PaymentComponents/CardPayment.jsx';
+import ChoseDelivery from './PaymentComponents/ChoseDelivery.jsx';
+import ChosePayment from './PaymentComponents/ChosePayment.jsx';
+import ConfirmedPage from './PaymentComponents/ConfirmedPage.jsx';
+import InvoicePayment from './PaymentComponents/InvoicePayment.jsx';
+import ShoppingCartPage from './PaymentComponents/ShoppingCartPage.jsx';
+import HomeDelivery from './PaymentComponents/HomeDelivery.jsx';
 import FAQ from './FAQPage/FAQ.jsx';
 import BytenReturer from './BytenReturerPage/BytenReturer.jsx';
+
 const App = () => {
   return (
     <Router>
       <Header/>
+      <Navbar/>
       <Routes>
+      
         <Route path="/" element={<Home />} />
         <Route path="/Phones" element={<Phones />} />
         <Route path="/Chargers" element={<Chargers />} />
@@ -27,10 +38,17 @@ const App = () => {
         <Route path="/Products" element={<ProductList />} />
         <Route path="/Terms" element={<Terms/>}/>
         <Route path="/Delivery" element={<Delivery/>}/>
-        <Route path="FAQ" element={<FAQ/>}/>
-        <Route path="BytenReturer" element={<BytenReturer/>}/>
-
+        <Route path="/CardPayment" element={<CardPayment/>}/>
+        <Route path="/ChoseDelivery" element={<ChoseDelivery/>}/>
+        <Route path="/ChosePayment" element={<ChosePayment/>}/>
+        <Route path="/ConfirmedPage" element={<ConfirmedPage/>}/>
+        <Route path="/InvoicePayment" element={<InvoicePayment/>}/>
+        <Route path="/ShoppingCartPage" element={<ShoppingCartPage/>}/>
+        <Route path="/HomeDelivery" element={<HomeDelivery/>}/>
+        <Route path="/FAQ" element={<FAQ/>}/>
+        <Route path="/BytenReturer" element={<BytenReturer/>}/>
       </Routes>
+
       <Footer/>
     </Router>
   );

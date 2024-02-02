@@ -1,0 +1,89 @@
+/* Payment.css */
+
+.Information-div {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10em;
+    justify-content: center;
+    
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    
+  }
+  .grid-confirm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Rutor kommer att fylla bredden och fördelas jämnt mellan varje rad */
+    gap: 16px; /* Avstånd mellan rutorna */
+  }
+  
+  .grid-confirm-item {
+    width: calc(50% - 8px); /* 50% bredd minus hälften av avståndet för att skapa två rutor per rad */
+    background-color: #ccc;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Hela skärmens höjd */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .thx {
+
+    display: flex;
+    flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centrera texten horisontellt */
+  }
