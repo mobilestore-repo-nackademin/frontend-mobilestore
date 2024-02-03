@@ -64,7 +64,7 @@ const PaymentPage = () => {
                     expiryOption,
                 };
 
-                const response = await axios.post('https://din-backend-api.com/betalning', paymentData);
+                const response = await axios.post('', paymentData);
 
                 console.log('Betalning lyckades:', response.data);
                 alert('Betalningen har behandlats.');
