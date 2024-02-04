@@ -10,11 +10,6 @@ const PaymentPage = () => {
     const [cardNumber, setCardNumber] = useState('');
     const [expiryMonthYear, setExpiryMonthYear] = useState('');
     const [cvv, setCVV] = useState('');
-    const [expiryOption, setExpiryOption] = useState('12');
-
-
-
-
 
     const handleCardHolderNameChange = (e) => {
         setCardHolderName(e.target.value.slice(0, 50));
@@ -32,9 +27,6 @@ const PaymentPage = () => {
         setCVV(e.target.value.slice(0, 3));
     };
 
-    const handleExpiryOptionChange = (e) => {
-        setExpiryOption(e.target.value);
-    };
 
     const validate = () => {
         const [expiryYear, expiryMonth] = expiryMonthYear.split('-');
@@ -61,7 +53,7 @@ const PaymentPage = () => {
                     expiryMonth: expiryMonthYear.split('-')[1], // Använd andra delen för månad
                     expiryYear: expiryMonthYear.split('-')[0],  // Använd första delen för år
                     cvv,
-                    expiryOption,
+
                 };
 
                 const response = await axios.post('', paymentData);
@@ -74,14 +66,13 @@ const PaymentPage = () => {
 
             } catch (error) {
                 console.error('Fel vid betalning:', error.message);
-                alert('Något gick fel vid betalningen. Vänligen försök igen.');
             }
         }
     };
 
     return (
         <div className="boxpay">
-            <h5>Betalingssida:!</h5>
+            <h5>Betalningsinformation</h5>
             <form>
                 <label>
                     Kortinnehavarens namn:
@@ -111,26 +102,18 @@ const PaymentPage = () => {
 
                 <br />
 
-                <label>
-                    Giltighetstid:
-                    <select value={expiryOption} onChange={handleExpiryOptionChange} required>
-                        <option value="24">24 månader</option>
-                    </select>
-                </label>
-
-                <br />
                 <Link to="/ConfirmedPage">
-                    <button type="button" onClick={handlePaymentSubmit}>
+                    <button className="button" onClick={handlePaymentSubmit}>
                         Bekräfta betalning
                     </button>
 
                 </Link>
-                <img className='betalning-icon' src="../../photos/betalnings.jpg" alt="" />
+
 
             </form>
 
 
-
+            <img className='betalning-icon' src="../../photos/betalnings.jpg" alt="" />
         </div>
     );
 };
