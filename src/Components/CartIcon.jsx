@@ -1,19 +1,13 @@
-// CartIcon.jsx
-import React, { useState } from 'react';
-import UseCart from './UseCart.jsx';
+import { useCart } from '../Context/CartContext.jsx';
+import React from 'react';
 
 const CartIcon = () => {
-  const [varukorgOpen, setVarukorgOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]); // Lägg till state för varukorgsobjekt
-
-  const handleToggleVarukorg = () => {
-    setVarukorgOpen(!varukorgOpen);
-  };
-
+  const { toggleCartVisibility } = useCart();
+  
   return (
     <div>
       <svg
-        onClick={handleToggleVarukorg}
+        onClick={toggleCartVisibility}        
         width="2em"
         height="2em"
         viewBox="0 0 1024 1024"
@@ -32,7 +26,7 @@ const CartIcon = () => {
           ></path>
         </g>
       </svg>
-      <UseCart varukorgOpen={varukorgOpen} cartItems={cartItems} />
+
     </div>
   );
 };
