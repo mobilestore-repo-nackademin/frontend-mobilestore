@@ -35,7 +35,7 @@ const PhonePage = () => {
 
   useEffect(() => {
     // Hämta alla produkter initialt
-    fetchProductsByCategory(1); // Byt ut "3" mot din specifika kategori-ID
+    fetchProductsByCategory(1);
   }, []);
 
   return (
