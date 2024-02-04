@@ -68,7 +68,16 @@ button:hover {
   margin-right: 230px;
 }
 
+.grid-item{
+  display: grid;
+  place-items: center;
+  height: 13em;
 
+}
+.lyout-button{
+  max-width: 20em;
+
+}
 
 
 

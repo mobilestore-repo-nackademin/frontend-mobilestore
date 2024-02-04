@@ -3,6 +3,13 @@ import {Link} from "react-router-dom";
 import './Payment.css';
 
 const ShoppingCartPage = () => {
+    const handleConfirmation = () => {
+        // ... annan kod ...
+        history.push(`/ConfirmedPage?deliveryMethod=${deliveryMethod}`);
+    }
+
+
+
     return (
         <div>
             {/* Välj hur du vill betala, gör dessa klickbara och ev. zooma ut*/}
@@ -19,7 +26,7 @@ const ShoppingCartPage = () => {
                     </g></svg>
                 </div>
             </Link>
-           <Link to="/CardPayment"> 
+           <Link to="/CardPayment">
                 <div className='grid-item'>
                 <h2>Betala med kort</h2>
                     <svg width="100px" height="100px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
@@ -33,6 +40,7 @@ const ShoppingCartPage = () => {
                     </g></svg>
                 </div>
             </Link>
+
             </div>
         </div>
     );
