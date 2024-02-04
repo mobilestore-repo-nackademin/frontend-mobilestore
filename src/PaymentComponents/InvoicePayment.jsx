@@ -1,88 +1,92 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useFormData from '../Context/useFormData.jsx';
+
 
 const InvoicePayment = () => {
-  const { formData, updateFormData } = useFormData();
+  const [formData, setFormData] = useState({
+    name: '',
+    street: '',
+    city: '',
+    zipcode: '',
+    personalNumber: '',
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
 
     if (name === 'personalNumber' && value.length > 12) {
       return;
     }
 
-
     if (name === 'zipcode' && value.length > 5) {
       return;
     }
 
-    updateFormData((prevData) => ({
+    setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-    console.log("Form data updated:", formData);
   };
 
-  console.log("Form data on InvoicePayment:", formData);
+  const handleConfirmation = () => {
+    const queryParams = Object.entries(formData)
+        .map(([key, value]) => `${key}=${value}`)
+        .join('&');
+
+    window.location.href = `/ConfirmedPage?${queryParams}`;
+  };
 
   return (
       <div className="container">
         <h4>Kontaktuppgifter</h4>
         <form>
           <div className="form-group">
-            <label htmlFor="name">Namn:</label>
+            <label htmlFor="name">Fullständiga Namn:</label>
             <input
                 type="text"
                 id="name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                style={{width:'150'}}
                 required
-
             />
           </div>
           <div className="form-group">
-            <label htmlFor="street">Gata:</label>
+            <label htmlFor="street">GataNamn:</label>
             <input
                 type="text"
                 id="street"
                 name="street"
                 value={formData.street}
                 onChange={handleChange}
-                style={{width:'150'}}
                 required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="city">Postort:</label>
+            <label htmlFor="city">PostOrt:</label>
             <input
                 type="text"
                 id="city"
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                style={{width:'150'}}
                 required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="zipcode">Postnummer:</label>
+            <label htmlFor="zipcode">PostNummer:</label>
             <input
                 type="text"
                 id="zipcode"
                 name="zipcode"
                 value={formData.zipcode}
                 onChange={handleChange}
-                maxLength="5" // Begränsa till 5 siffror
-                style={{width:'150'}}
+                maxLength="5"
                 required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="personalNumber">Personnummer:</label>
+            <label htmlFor="personalNumber">PersonNummer:</label>
             <input
                 type="text"
                 id="personalNumber"
@@ -90,13 +94,12 @@ const InvoicePayment = () => {
                 value={formData.personalNumber}
                 onChange={handleChange}
                 maxLength="12"
-                style={{width:'150'}}
                 required
             />
+
           </div>
           <Link to="/ConfirmedPage">
-
-            <button className="betalning-button">Bekräfta informatinen</button>
+            <button className="betalning-button" onClick={handleConfirmation}> Bekräfta Informatinen</button>
           </Link>
         </form>
         <div className="FK_icon-container">
@@ -106,13 +109,13 @@ const InvoicePayment = () => {
           <img className="FK_icon" src="../../photos/faktura-icon.png" alt=""/>
         </div>
 
-
-
-
-
-
       </div>
   );
 };
 
 export default InvoicePayment;
+
+
+
+
+
