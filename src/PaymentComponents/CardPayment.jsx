@@ -111,14 +111,6 @@ const PaymentPage = () => {
 
                 <br />
 
-                <label>
-                    Giltighetstid:
-                    <select value={expiryOption} onChange={handleExpiryOptionChange} required>
-                        <option value="24">24 månader</option>
-                    </select>
-                </label>
-
-                <br />
                 <Link to="/ConfirmedPage">
                     <button type="button" onClick={handlePaymentSubmit}>
                         Bekräfta betalning
