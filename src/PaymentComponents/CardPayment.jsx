@@ -72,8 +72,8 @@ const PaymentPage = () => {
 
     return (
         <div className="boxpay">
-            <h5>Betalningsinformation</h5>
-            <form>
+            <h5>Betalningsinformation.</h5>
+            <form className="bella">
                 <label>
                     Kortinnehavarens namn:
                     <input type="text" value={cardHolderName} onChange={handleCardHolderNameChange} required />
@@ -103,7 +103,7 @@ const PaymentPage = () => {
                 <br />
 
                 <Link to="/ConfirmedPage">
-                    <button className="button" onClick={handlePaymentSubmit}>
+                    <button className="but" onClick={handlePaymentSubmit}>
                         Bekräfta betalning
                     </button>
 

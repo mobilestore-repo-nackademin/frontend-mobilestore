@@ -1,26 +1,26 @@
 
 .boxpay {
-  max-width: 960px;
+  max-width: 940px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: grid;
-  grid-template-rows: auto 1fr auto; /* 3 rader: en för titeln, en för formulärfälten, en för knappen och ikonen */
-  gap: 20px; /* Avstånd mellan rader och kolumner */
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
 }
 
 h5 {
   text-align: center;
-  grid-row: 1; /* Placera titeln i den första raden */
+  grid-row: 1;
 }
 
 form {
   display: grid;
-  grid-template-columns: 20% 1fr; /* 20% för första kolumnen (titel) och resten för andra kolumnen (formulärfält) */
-  align-items: center; /* Centrera formulärfälten vertikalt */
+  grid-template-columns: 20% 1fr;
+  align-items: center;
   gap: 10px;
-  grid-row: 2; /* Placera formulärfälten i den andra raden */
+  grid-row: 2;
 }
 
 label {
@@ -29,7 +29,7 @@ label {
 
 input,
 select {
-  width: 100%; /* Fyll resten av bredden av förälderelementet */
+  width: 100%;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -37,7 +37,7 @@ select {
 }
 
 button {
-  width: 100%; /* Fyll hela bredden av förälderelementet */
+  width: 100%;
   padding: 10px;
   background-color: #4caf50;
   color: white;
@@ -52,9 +52,26 @@ button:hover {
 
 .betalning-icon {
   max-width: 100%;
-  grid-row: 3; /* Placera ikonen i den tredje raden */
-  justify-self: center; /* Centrera ikonen horisontellt */
+  grid-row: 0;
+  justify-self: center;
 }
+
+.FK_icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.FK_icon {
+  max-width: 40px;
+  margin-right: 230px;
+}
+
+
+
+
+
 
 
 
