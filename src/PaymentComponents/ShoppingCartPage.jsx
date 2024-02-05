@@ -1,24 +1,37 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import { useCart } from '../Context/CartContext.jsx';
+import { Link } from 'react-router-dom';
 import './Payment.css';
 
-
 const ShoppingCartPage = () => {
-    return (
-      <div className="container">
-      <h1 className='thx'>Varukorg
+  const { cart, getTotal } = useCart();
 
-      </h1>
+  return (
+    <div className="container">
+      <h1 className="thx">Varukorg</h1>
 
       <div className="grid-confirm">
         <div className="grid-confirm-item">
           <strong>Produkter</strong> <br />
-          
-          <Link to="/"><button>Handla mer</button></Link> <Link to="/ChoseDelivery"><button>Välj leveranssätt</button></Link>
+          {cart.map((item, index) => (
+            <div key={index}>
+              <p>{item.attributes.Title}</p>
+              <strong>Pris: {item.attributes.Price} kr</strong>
+            </div>
+          ))}
+          <br />
+          <strong>Totalt: {getTotal().toFixed(2)} kr</strong> <br />
+
+          <Link to="/">
+            <button>Handla mer</button>
+          </Link>{' '}
+          <Link to="/ChoseDelivery">
+            <button>Välj leveranssätt</button>
+          </Link>
         </div>
-   
-      </div></div>
-    );
-  };
+      </div>
+    </div>
+  );
+};
 
 export default ShoppingCartPage;

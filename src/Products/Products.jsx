@@ -1,12 +1,15 @@
-// ProductList.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './ProductsCss/ProductList.css';
-import UseCart from '../Components/UseCart.jsx'  // Importera UseCart
+import './ProductsCss/Products.css';
+import { useCart } from '../Context/CartContext.jsx';
 
-const ProductList = () => {
+const Products = () => {
   const [products, setProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([]);  // Lägg till en state för varukorgen
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
 
   const fetchProducts = async () => {
     try {
@@ -15,16 +18,6 @@ const ProductList = () => {
     } catch (error) {
       console.error('Error fetching products:', error);
     }
-  };
-
-  const addToCart = (product) => {
-    setCartItems((prevCartItems) => [
-      ...prevCartItems,
-      {
-        title: product.attributes.Title,
-        price: product.attributes.Price,
-      },
-    ]);
   };
 
   useEffect(() => {
@@ -44,15 +37,13 @@ const ProductList = () => {
               <h3>{attributes.Title}</h3>
               <p>{attributes.Description}</p>
               <p>Pris: {attributes.Price} kr</p>
-              <button onClick={() => addToCart(product)}>Köp</button>
+              <button onClick={() => handleAddToCart(product)}>Köp</button>
             </div>
           );
         })}
       </div>
-      {/* Skicka varukorgsdata till UseCart */}
-      <UseCart varukorgOpen={false} cartItems={cartItems} />
     </div>
   );
 };
 
-export default ProductList;
+export default Products;

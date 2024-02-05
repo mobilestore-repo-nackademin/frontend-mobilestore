@@ -9,7 +9,7 @@ import Cases from './Cases/Cases.jsx';
 import Phones from './Phone/Phonepage.jsx';
 import Support from './SupportPage/SupportPage.jsx';
 import AboutUs from './AboutUsPage/Aboutus.jsx';
-import ProductList from './Products/Products.jsx';
+import Products from './Products/Products.jsx';
 import Terms from './TermsAndCondition/TermsAndConditions.jsx';
 import Delivery from './DeliveryPage/Delivery.jsx';
 import CardPayment from './PaymentComponents/CardPayment.jsx';
@@ -21,13 +21,17 @@ import ShoppingCartPage from './PaymentComponents/ShoppingCartPage.jsx';
 import HomeDelivery from './PaymentComponents/HomeDelivery.jsx';
 import FAQ from './FAQPage/FAQ.jsx';
 import BytenReturer from './BytenReturerPage/BytenReturer.jsx';
+import { CartProvider } from './Context/CartContext.jsx';
 
 const App = () => {
   return (
     <Router>
+      <CartProvider>
       <Header/>
       <Navbar/>
+      
       <Routes>
+        
       
         <Route path="/" element={<Home />} />
         <Route path="/Phones" element={<Phones />} />
@@ -35,7 +39,7 @@ const App = () => {
         <Route path="/Cases" element={<Cases />} />
         <Route path="/Support" element={<Support />} />
         <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/Products" element={<ProductList />} />
+        <Route path="/Products" element={<Products />} />
         <Route path="/Terms" element={<Terms/>}/>
         <Route path="/Delivery" element={<Delivery/>}/>
         <Route path="/CardPayment" element={<CardPayment/>}/>
@@ -47,9 +51,11 @@ const App = () => {
         <Route path="/HomeDelivery" element={<HomeDelivery/>}/>
         <Route path="/FAQ" element={<FAQ/>}/>
         <Route path="/BytenReturer" element={<BytenReturer/>}/>
+      
       </Routes>
-
       <Footer/>
+      
+  </CartProvider>
     </Router>
   );
 };

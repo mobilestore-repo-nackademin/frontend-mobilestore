@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Payment.css';
+
+
 const AddressForm = () => {
   const [formData, setFormData] = useState({
     address: '',
@@ -73,8 +75,11 @@ const AddressForm = () => {
             <option value="option2">13:00 - 16:00</option>
             <option value="option3">16:00 - 19:00</option>
           </select>
+
         </div>
+
        <Link to="/ChosePayment"> <button type="submit">Gå vidare</button></Link>
+
       </form>
     </div>
   );

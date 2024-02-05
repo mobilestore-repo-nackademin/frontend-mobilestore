@@ -1,60 +1,122 @@
 
-import {Link} from "react-router-dom";
-import './Payment.css';
+
 import React, { useState } from 'react';
+import axios from 'axios';
+import {Link} from "react-router-dom";
 
-const MyForm = () => {
-    const [numbers, setNumbers] = useState('');
-    const [letters, setLetters] = useState('');
-    const [date, setDate] = useState('');
 
-    const handleNumbersChange = (e) => {
-        setNumbers(e.target.value);
+const PaymentPage = () => {
+    const [cardHolderName, setCardHolderName] = useState('');
+    const [cardNumber, setCardNumber] = useState('');
+    const [expiryMonthYear, setExpiryMonthYear] = useState('');
+    const [cvv, setCVV] = useState('');
+
+    const handleCardHolderNameChange = (e) => {
+        setCardHolderName(e.target.value.slice(0, 50));
     };
 
-    const handleLettersChange = (e) => {
-        setLetters(e.target.value);
+    const handleCardNumberChange = (e) => {
+        setCardNumber(e.target.value.slice(0, 16));
     };
 
-    const handleDateChange = (e) => {
-        setDate(e.target.value);
+    const handleExpiryMonthYearChange = (e) => {
+        setExpiryMonthYear(e.target.value);
     };
 
-    const validateForm = () => {
-        if (numbers.length === 16 && /^[A-Za-z]{3}$/.test(letters) && date) {
-                alert('Alla krav är uppfyllda. Du kan gå vidare!');
-                // Här kan du lägga till logik för att gå vidare i din applikation
-            } else {
-                alert('Vänligen fyll i fälten korrekt.');
-            }
+    const handleCVVChange = (e) => {
+        setCVV(e.target.value.slice(0, 3));
+    };
+
+
+    const validate = () => {
+        const [expiryYear, expiryMonth] = expiryMonthYear.split('-');
+
+        if (
+            cardHolderName.trim() === '' ||
+            cardNumber.length !== 16 ||
+            !expiryMonth || !expiryYear ||
+            cvv.trim() === '' || cvv.length !== 3
+        ) {
+            alert('Vänligen fyll i alla obligatoriska fält korrekt.');
+            return false;
+        }
+
+        return true;
+    };
+
+    const handlePaymentSubmit = async () => {
+        if (validate()) {
+            try {
+                const paymentData = {
+                    cardHolderName,
+                    cardNumber,
+                    expiryMonth: expiryMonthYear.split('-')[1], // Använd andra delen för månad
+                    expiryYear: expiryMonthYear.split('-')[0],  // Använd första delen för år
+                    cvv,
+
                 };
 
-                return (
-                <div>
-                    <label>
-                        Ange siffror (exakt 16):
-                        <input type="text" value={numbers} onChange={handleNumbersChange} pattern="\d{5}" title="Ange exakt 5 siffror" />
-                    </label>
+                const response = await axios.post('', paymentData);
 
-                    <br />
+                console.log('Betalning lyckades:', response.data);
+                alert('Betalningen har behandlats.');
+                history.push('/ConfirmedPage');
 
-                    <label>
-                Ange bokstäver (exakt 3):
-                <input type="text" value={letters} onChange={handleLettersChange} pattern="[A-Za-z]{3}" title="Ange exakt 3 bokstäver" />
-            </label>
+                // Om betalningen lyckades, navigera till bekräftelsesidan
 
-            <br />
+            } catch (error) {
+                console.error('Fel vid betalning:', error.message);
+            }
+        }
+    };
 
-            <label>
-                Ange datum:
-                <input type="date" value={date} onChange={handleDateChange} />
-            </label>
+    return (
+        <div className="boxpay">
+            <h5>Betalningsinformation.</h5>
+            <form className="bella">
+                <label>
+                    Kortinnehavarens namn:
+                    <input type="text" value={cardHolderName} onChange={handleCardHolderNameChange} required />
+                </label>
 
-            <br />
+                <br />
 
-            <button onClick={validateForm}>Gå vidare</button>
+                <label>
+                    Kortnummer:
+                    <input type="text" value={cardNumber} onChange={handleCardNumberChange} required />
+                </label>
+
+                <br />
+
+                <label>
+                    Giltighetsmånad och år:
+                    <input type="month" value={expiryMonthYear} onChange={handleExpiryMonthYearChange} required />
+                </label>
+
+                <br />
+
+                <label>
+                    CVV:
+                    <input type="text" value={cvv} onChange={handleCVVChange} maxLength="3" required />
+                </label>
+
+                <br />
+
+                <Link to="/ConfirmedPage">
+                    <button className="but" onClick={handlePaymentSubmit}>
+                        Bekräfta betalning
+                    </button>
+
+                </Link>
+
+
+            </form>
+
+
+            <img className='betalning-icon' src="../../photos/betalnings.jpg" alt="" />
         </div>
     );
 };
 
-export default MyForm;
+export default PaymentPage;
+

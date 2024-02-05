@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../Products/ProductsCss/ProductList.css';
+import '../Products/ProductsCss/Products.css';
 
 const PhonePage = () => {
   const [products, setProducts] = useState([]);
@@ -35,7 +35,7 @@ const PhonePage = () => {
 
   useEffect(() => {
     // Hämta alla produkter initialt
-    fetchProductsByCategory(1); // Byt ut "3" mot din specifika kategori-ID
+    fetchProductsByCategory(1);
   }, []);
 
   return (
