@@ -1,10 +1,19 @@
 import React from 'react';
 import { useCart } from '../Context/CartContext.jsx';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Payment.css';
 
 const ShoppingCartPage = () => {
+  
+  const navigate = useNavigate();
   const { cart, getTotal } = useCart();
+  const handleConfirmation = () => {
+    const queryParams = cart.map((item) => {
+      return `title=${encodeURIComponent(item.attributes.Title)}&price=${item.attributes.Price}`;
+    }).join('&');
+
+    navigate(`/ChoseDelivery?${queryParams}`);
+  };
 
   return (
     <div className="container">
@@ -25,9 +34,7 @@ const ShoppingCartPage = () => {
           <Link to="/">
             <button>Handla mer</button>
           </Link>{' '}
-          <Link to="/ChoseDelivery">
-            <button>Välj leveranssätt</button>
-          </Link>
+          <button onClick={handleConfirmation}>Välj leveranssätt</button>
         </div>
       </div>
     </div>

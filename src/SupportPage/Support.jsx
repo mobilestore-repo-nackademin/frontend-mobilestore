@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Support.css';
 
-
-
 export const ContactUs = () => {
   const form = useRef();
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -16,27 +16,32 @@ export const ContactUs = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          setSuccessMessage('Ditt meddelande har skickats!');
+          setErrorMessage('');
         },
         (error) => {
+          setErrorMessage('Misslyckades med att skicka meddelandet. Försök igen senare.');
+          setSuccessMessage('');
           console.log('FAILED...', error.text);
         },
       );
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
+    <div>
+      <form ref={form} onSubmit={sendEmail}>
+        <label>Name</label>
+        <input type="text" name="user_name" />
+        <label>Din Epost</label>
+        <input type="email" name="user_email" />
+        <label>Message</label>
+        <textarea name="message" />
+        <input type="submit" value="Send" />
+      </form>
+      {successMessage && <div style={{ color: 'green' }}>{successMessage}</div>}
+      {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
+    </div>
   );
 };
-
-
 
 export default ContactUs;

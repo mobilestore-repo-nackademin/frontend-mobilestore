@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
+// HomeDelivery.jsx
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useFormContext } from '../Context/FormContext.jsx';
 import './Payment.css';
 
-
-const AddressForm = () => {
-  const [formData, setFormData] = useState({
-    address: '',
-    city: '',
-    zipCode: '',
-    selectedOption: 'option1', // Välj en standardval
-  });
+const HomeDelivery = () => {
+  const { formData, updateFormData } = useFormContext();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    updateFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -21,53 +17,64 @@ const AddressForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Hantera formulärinskickning här
-    console.log(formData);
+    // Ingen ytterligare behandling behövs här, data uppdateras direkt i FormContext
   };
 
   return (
     <div>
-      <h2>Fyll i dina uppgifter</h2>
+      <h2>Fyll i dina uppgifter för hemleverans</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="address">Adress:</label>
+          <label htmlFor="nameDelivery">Namn:</label>
           <input
             type="text"
-            id="address"
-            name="address"
-            value={formData.address}
+            id="nameDelivery"
+            name="nameDelivery"
+            value={formData.nameDelivery}
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="city">Postort:</label>
+          <label htmlFor="addressDelivery">Adress:</label>
           <input
             type="text"
-            id="city"
-            name="city"
-            value={formData.city}
+            id="addressDelivery"
+            name="addressDelivery"
+            value={formData.addressDelivery}
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="zipCode">Postnummer:</label>
+          <label htmlFor="cityDelivery">Postort:</label>
           <input
             type="text"
-            id="zipCode"
-            name="zipCode"
-            value={formData.zipCode}
+            id="cityDelivery"
+            name="cityDelivery"
+            value={formData.cityDelivery}
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="selectedOption">Välj ett alternativ:</label>
+          <label htmlFor="zipCodeDelivery">Postnummer:</label>
+          <input
+            type="text"
+            id="zipCodeDelivery"
+            name="zipCodeDelivery"
+            maxLength="5"
+            value={formData.zipCodeDelivery}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="selectedOptionDelivery">Välj ett alternativ:</label>
           <select
-            id="selectedOption"
-            name="selectedOption"
-            value={formData.selectedOption}
+            id="selectedOptionDelivery"
+            name="selectedOptionDelivery"
+            value={formData.selectedOptionDelivery}
             onChange={handleChange}
             required
           >
@@ -75,14 +82,14 @@ const AddressForm = () => {
             <option value="option2">13:00 - 16:00</option>
             <option value="option3">16:00 - 19:00</option>
           </select>
-
         </div>
 
-       <Link to="/ChosePayment"> <button type="submit">Gå vidare</button></Link>
-
+        <Link to="/ChosePayment">
+          <button type="submit">Gå vidare</button>
+        </Link>
       </form>
     </div>
   );
 };
 
-export default AddressForm;
+export default HomeDelivery;

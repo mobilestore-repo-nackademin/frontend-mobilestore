@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useFormContext } from '../Context/FormContext.jsx';
+import './Payment.css';
 
 const InvoicePayment = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    street: '',
-    city: '',
-    zipcode: '',
-    personalNumber: '',
-  });
+  const { formData, updateFormData } = useFormContext();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,18 +18,17 @@ const InvoicePayment = () => {
       return;
     }
 
-    setFormData((prevData) => ({
+    updateFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
 
   const handleConfirmation = () => {
-    const queryParams = Object.entries(formData)
-        .map(([key, value]) => `${key}=${value}`)
-        .join('&');
-
-    window.location.href = `/ConfirmedPage?${queryParams}`;
+    // Här kan du lägga till logik för bekräftelse, t.ex. navigering eller API-anrop.
+    // I detta exempel navigerar jag bara till '/ConfirmedPage'.
+    // Använd din faktiska bekräftelselogik här.
+    navigate('/ConfirmedPage');
   };
 
   return (
@@ -93,7 +88,7 @@ const InvoicePayment = () => {
                 name="personalNumber"
                 value={formData.personalNumber}
                 onChange={handleChange}
-                maxLength="12"
+                maxLength="10"
                 required
             />
 

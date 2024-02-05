@@ -1,22 +1,17 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useCart } from '../Context/CartContext.jsx'; 
+import { useFormContext } from '../Context/FormContext.jsx';
 import './Payment.css';
-import { useCart } from '../Context/CartContext.jsx';
 
 const ConfirmedPage = () => {
   const { cart, getTotal } = useCart();
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const deliveryMethod = queryParams.get('deliveryMethod');
+  const { formData } = useFormContext();
+  const location = useLocation();  // Lägg till här
 
+  // Använd location för att få tillgång till state
+  const { state } = location;
 
-  const formDataFromQuery = {
-    name: queryParams.get('name') || '',
-    street: queryParams.get('street') || '',
-    city: queryParams.get('city') || '',
-    zipcode: queryParams.get('zipcode') || '',
-    personalNumber: queryParams.get('personalNumber') || '',
-  };
 
   return (
       <div className="container">
@@ -40,29 +35,32 @@ const ConfirmedPage = () => {
 
           <div className="grid-confirm-item">
             <strong>Leveranssätt</strong>
-            <p>Leveranssätt: {deliveryMethod === 'home' ? 'Hemleverans' : 'Hämta i butik'}</p>
-
+            <p>Namn: {formData.nameDelivery}</p>
+            <p>Gata: {formData.addressDelivery}</p>
+            <p>Postort: {formData.cityDelivery}</p>
+            <p>Postnummer: {formData.zipCodeDelivery}</p>
           </div>
 
           <div className="grid-confirm-item">
-            <strong>Produkter</strong>
-            {cart.map((item, index) => (
-                <div key={index}>
-                  <p>{item.attributes.Title}</p>
-                  <strong>Pris: {item.attributes.Price} kr</strong>
-                </div>
-            ))}
-            <br />
-            <strong>Totalt: {getTotal().toFixed(2)} kr</strong> <br />
-          </div>
+          <strong>Produkter</strong>
+          {cart.map((item, index) => (
+            <div key={index}>
+              <p>{item.title}</p>
+              <strong>Pris: {item.price} kr</strong>
+            </div>
+          ))}
+          <br />
+          <strong>Totalt: {getTotal().toFixed(2)} kr</strong> <br />
+        </div>
 
           <div className="grid-confirm-item">
-            <strong>Faktura adress</strong>
-            <p>Namn: {formDataFromQuery.name}</p>
-            <p>Gata: {formDataFromQuery.street}</p>
-            <p>Postort: {formDataFromQuery.city}</p>
-            <p>Postkod: {formDataFromQuery.zipcode}</p>
-          </div>
+          <strong>Faktura adress</strong>
+          <p>Namn: {formData.name}</p>
+          <p>Gata: {formData.street}</p>
+          <p>Postort: {formData.city}</p>
+          <p>Postnummer: {formData.zipcode}</p>
+          
+        </div>
         </div>
         <Link to="/"><button>Handla mer</button></Link>
       </div>

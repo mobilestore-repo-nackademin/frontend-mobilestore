@@ -22,17 +22,16 @@ import HomeDelivery from './PaymentComponents/HomeDelivery.jsx';
 import FAQ from './FAQPage/FAQ.jsx';
 import BytenReturer from './BytenReturerPage/BytenReturer.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
+import { FormProvider } from './Context/FormContext';
 
 const App = () => {
   return (
     <Router>
       <CartProvider>
+        <FormProvider>
       <Header/>
       <Navbar/>
-      
       <Routes>
-        
-      
         <Route path="/" element={<Home />} />
         <Route path="/Phones" element={<Phones />} />
         <Route path="/Chargers" element={<Chargers />} />
@@ -51,10 +50,9 @@ const App = () => {
         <Route path="/HomeDelivery" element={<HomeDelivery/>}/>
         <Route path="/FAQ" element={<FAQ/>}/>
         <Route path="/BytenReturer" element={<BytenReturer/>}/>
-      
       </Routes>
       <Footer/>
-      
+      </FormProvider>
   </CartProvider>
     </Router>
   );
