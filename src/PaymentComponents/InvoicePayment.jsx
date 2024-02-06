@@ -3,9 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormContext } from '../Context/FormContext.jsx';
 import './Payment.css';
 
-const InvoicePayment = () => {
+const InvoicePayment = ({ onTabCompletion }) => {
   const { formData, updateFormData } = useFormContext();
-  
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,15 +24,10 @@ const InvoicePayment = () => {
     }));
   };
 
-<<<<<<< HEAD
-  const handleConfirmation = (tabToOpen) => {
-    // Gör något med tabToOpen, till exempel använd det som argument till onTabCompletion
-    onTabCompletion(tabToOpen);
-=======
   const handleConfirmation = () => {
-
+    // Gör något med tabToOpen, till exempel använd det som argument till onTabCompletion
+    onTabCompletion(0);
     navigate('/ConfirmedPage');
->>>>>>> 6cb1b45646d92eb7e3a32ea85c28d0db8c596c3a
   };
 
   return (

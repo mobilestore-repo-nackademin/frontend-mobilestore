@@ -3,13 +3,10 @@ import "./BytenReturer.css"
 
 const BytenReturer = () => {
     return (
-<<<<<<< HEAD
-=======
 
       <div className="BytenReturer">
         <img className="img1" src="./photos/Returnphone.png" />  
 
->>>>>>> 6cb1b45646d92eb7e3a32ea85c28d0db8c596c3a
       <div className="container">
 
         <img className="ReturnPhoto" src="./photos/support.1.png" alt="" />
