@@ -99,9 +99,9 @@ const InvoicePayment = () => {
         </form>
         <div className="FK_icon-container">
 
-          <img className="FK_icon" src="../../photos/faktura-icon-02.jpg" alt=""/>
-          <img className="FK_icon" src="../../photos/faktura-icon-01.png" alt=""/>
-          <img className="FK_icon" src="../../photos/faktura-icon.png" alt=""/>
+          <img className="FK_icon" src="../../photos/faktura-bild.webp" alt=""/>
+          <img className="FK_icon" src="../../photos/faktura-bild-05.webp" alt=""/>
+          <img className="FK_icon" src="../../photos/faktura-bild-06.webp" alt=""/>
         </div>
 
       </div>
