@@ -81,13 +81,13 @@ button:hover {
 .grid-confirm {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px; /* Justera gapet mellan rutor efter behov */
-  justify-content: center; /* Centrera inom föräldern */
-  margin: 20px; /* Justera marginalen efter behov */
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
 }
 
 .grid-confirm-item {
-  border: 1px solid #ddd; /* Ram för att markera varje ruta */
-  padding: 20px; /* Justera padding efter behov */
-  text-align: center; /* Centrera innehållet horisontellt */
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
 }

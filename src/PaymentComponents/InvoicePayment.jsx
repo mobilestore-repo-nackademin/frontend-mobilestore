@@ -25,9 +25,7 @@ const InvoicePayment = () => {
   };
 
   const handleConfirmation = () => {
-    // Här kan du lägga till logik för bekräftelse, t.ex. navigering eller API-anrop.
-    // I detta exempel navigerar jag bara till '/ConfirmedPage'.
-    // Använd din faktiska bekräftelselogik här.
+
     navigate('/ConfirmedPage');
   };
 
