@@ -3,16 +3,10 @@ import "./BytenReturer.css"
 
 const BytenReturer = () => {
     return (
-<<<<<<< HEAD
-      <div className="BytenReturer">
-        <img className="img1" src="./photos/Returnphone.png" />  
-=======
       <div className="container">
-<<<<<<< HEAD
+
         <img className="ReturnPhoto" src="./photos/support.1.png" alt="" />
-=======
->>>>>>> 30b3b885a831aa1898038edd6b8f082309b5a6de
->>>>>>> 29015e2e27561dc2e4aac7a92bdb407d19c399e6
+
         <h2>Reklamation och Retur</h2>
         <p>Vi beklagar om du har några problem med ditt köp. Nedan finns information om hur du kan reklamera eller returnera produkter.</p>
   

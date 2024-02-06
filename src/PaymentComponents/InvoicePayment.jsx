@@ -5,7 +5,7 @@ import './Payment.css';
 
 const InvoicePayment = () => {
   const { formData, updateFormData } = useFormContext();
-  const navigate = useNavigate();
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,11 +24,9 @@ const InvoicePayment = () => {
     }));
   };
 
-  const handleConfirmation = () => {
-    // Här kan du lägga till logik för bekräftelse, t.ex. navigering eller API-anrop.
-    // I detta exempel navigerar jag bara till '/ConfirmedPage'.
-    // Använd din faktiska bekräftelselogik här.
-    navigate('/ConfirmedPage');
+  const handleConfirmation = (tabToOpen) => {
+    // Gör något med tabToOpen, till exempel använd det som argument till onTabCompletion
+    onTabCompletion(tabToOpen);
   };
 
   return (
@@ -99,7 +97,7 @@ const InvoicePayment = () => {
           </div>
           <br />
           <Link to="/ConfirmedPage">
-            <button className="betalning-button" onClick={handleConfirmation}> Bekräfta Informatinen</button>
+            <button className="betalning-button" onClick={() => handleConfirmation(0)}> Bekräfta Informatinen</button>
           </Link>
         </form>
         <div className="FK_icon-container">

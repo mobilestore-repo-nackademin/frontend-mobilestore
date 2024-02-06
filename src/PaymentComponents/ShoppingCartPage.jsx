@@ -3,6 +3,7 @@ import { useCart } from '../Context/CartContext.jsx';
 import { Link, useNavigate } from 'react-router-dom';
 import './Payment.css';
 
+
 const ShoppingCartPage = () => {
   
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const ShoppingCartPage = () => {
       return `title=${encodeURIComponent(item.attributes.Title)}&price=${item.attributes.Price}`;
     }).join('&');
 
-    navigate(`/ChoseDelivery?${queryParams}`);
+    navigate(`/PurchasePage?${queryParams}`);
   };
 
   return (
@@ -34,7 +35,8 @@ const ShoppingCartPage = () => {
           <Link to="/">
             <button>Handla mer</button>
           </Link>{' '}
-          <button onClick={handleConfirmation}>Välj leveranssätt</button>
+          <button onClick={handleConfirmation}>Gå vidare</button>
+          
         </div>
       </div>
     </div>

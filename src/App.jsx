@@ -20,6 +20,7 @@ import FAQ from './FAQPage/FAQFile.jsx';
 import BytenReturer from './BytenReturerPage/BytenReturerFile.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
 import { FormProvider } from './Context/FormContext';
+import PurchasePage from './PaymentComponents/PurchasePage.jsx'
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="/HomeDelivery" element={<HomeDelivery/>}/>
         <Route path="/FAQ" element={<FAQ/>}/>
         <Route path="/BytenReturer" element={<BytenReturer/>}/>
+        <Route path="/PurchasePage" element={<PurchasePage/>}/>
       </Routes>
       <Footer/>
       </FormProvider>

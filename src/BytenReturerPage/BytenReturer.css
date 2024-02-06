@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 .ReturnPhoto{
-    height: 10em;
-    width: 10em;
+  height: 5em;
+  width: 5em;
 }
-=======
+
 .BytenReturer {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     max-width: 800px;
@@ -44,4 +43,3 @@
     width: 30%;
   }
   
->>>>>>> 29015e2e27561dc2e4aac7a92bdb407d19c399e6

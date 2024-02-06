@@ -6,7 +6,12 @@ import { useCart } from '../Context/CartContext.jsx';
 
 const CartPopup = ({ onClose }) => {
   const { cart, getTotal, handleCheckout } = useCart();
+  const handleCheckoutAndClose = () => {
+  
+    onClose();
 
+    // kan ta bort den här funktionen och sätta handleCheckout på "till kassa" om något går fel
+  };
   return (
     <div className="popup">
       <h2 className="cart-title">Varukorg</h2>
@@ -29,7 +34,7 @@ const CartPopup = ({ onClose }) => {
           Stäng
         </button>
         <Link to="/ShoppingCartPage">
-          <button className="checkout-button" onClick={handleCheckout}>
+          <button className="checkout-button" onClick={handleCheckoutAndClose}>
             Till kassan
           </button>
         </Link>
