@@ -21,8 +21,8 @@ const HomeDelivery = () => {
   };
 
   return (
-    <div>
-      <h2>Fyll i dina uppgifter för hemleverans</h2>
+    <div className='container'>
+      <h2 className='thx'>Fyll i dina uppgifter för hemleverans</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="nameDelivery">Namn:</label>
@@ -35,6 +35,7 @@ const HomeDelivery = () => {
             required
           />
         </div>
+        <br />
         <div className="form-group">
           <label htmlFor="addressDelivery">Adress:</label>
           <input
@@ -46,6 +47,7 @@ const HomeDelivery = () => {
             required
           />
         </div>
+        <br />
         <div className="form-group">
           <label htmlFor="cityDelivery">Postort:</label>
           <input
@@ -57,6 +59,7 @@ const HomeDelivery = () => {
             required
           />
         </div>
+        <br />
         <div className="form-group">
           <label htmlFor="zipCodeDelivery">Postnummer:</label>
           <input
@@ -69,6 +72,7 @@ const HomeDelivery = () => {
             required
           />
         </div>
+        <br />
         <div className="form-group">
           <label htmlFor="selectedOptionDelivery">Välj ett alternativ:</label>
           <select
@@ -83,7 +87,7 @@ const HomeDelivery = () => {
             <option value="option3">16:00 - 19:00</option>
           </select>
         </div>
-
+          <br />
         <Link to="/ChosePayment">
           <button type="submit">Gå vidare</button>
         </Link>

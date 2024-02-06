@@ -5,7 +5,7 @@ import TermsInfo from "./TermsInfo.jsx";
 
 const TermsAndConditions = () => {
     return (
-        <div>
+        <div className='container'>
             <TermsInfo />      
             
         </div>

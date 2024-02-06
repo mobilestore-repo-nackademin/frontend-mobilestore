@@ -32,3 +32,9 @@
 
 
 
+.FooterUl{
+  list-style-type: none;
+}
+.FooterLi{
+color: white;
+}

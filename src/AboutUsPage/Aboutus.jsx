@@ -6,7 +6,7 @@ import SocialIcons from "./SocialIcons.jsx";
 
 const Aboutus = () => {
     return (
-        <div>
+        <div className='container'>
             <AboutUsPage />      
             <SocialIcons/>  
         </div>

@@ -5,6 +5,7 @@ import { faInstagram, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg
 
 const SocialIcons = () => {
   return (
+    
     <div className="social-icons">
       <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faInstagram} />
@@ -16,6 +17,7 @@ const SocialIcons = () => {
         <FontAwesomeIcon icon={faYoutube} />
       </a>
     </div>
+    
   );
 };
 

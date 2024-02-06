@@ -10,7 +10,7 @@ const ChoseDelivery = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       {/* Välj hur du vill betala, gör dessa klickbara och med pris på hemleverans*/}
       <div className="grid-container">
         <div className="grid-item">

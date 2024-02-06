@@ -11,13 +11,13 @@ const ShoppingCartPage = () => {
 
 
     return (
-        <div>
+        <div className='container'>
             {/* Välj hur du vill betala, gör dessa klickbara och ev. zooma ut*/}
             <div className="grid-container">
             <Link to="/InvoicePayment">
                 <div className='grid-item'>
-                    <h2>Betala med faktura</h2>
-                    <svg width="100px" height="100px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                    <h2 className='h2-payment'>Betala med faktura</h2>
+                    <svg width="15em" height="15em" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -28,8 +28,8 @@ const ShoppingCartPage = () => {
             </Link>
            <Link to="/CardPayment">
                 <div className='grid-item'>
-                <h2>Betala med kort</h2>
-                    <svg width="100px" height="100px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <h2 className='h2-payment'>Betala med kort</h2>
+                    <svg width="15em" height="15em" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                     <g id="SVGRepo_iconCarrier"><path d="M934.4 755.2c0 14.08-11.52 25.6-25.6 25.6H153.6c-14.08 0-25.6-11.52-25.6-25.6V294.4c0-14.08 11.52-25.6 25.6-25.6h755.2c14.08 0 25.6 11.52 25.6 25.6v460.8z" fill="#B8CA43"></path>
                     <path d="M908.8 793.6H153.6c-21.76 0-38.4-16.64-38.4-38.4V294.4c0-21.76 16.64-38.4 38.4-38.4h755.2c21.76 0 38.4 16.64 38.4 38.4v460.8c0 21.76-16.64 38.4-38.4 38.4zM153.6 281.6c-7.68 0-12.8 5.12-12.8 12.8v460.8c0 7.68 5.12 12.8 12.8 12.8h755.2c7.68 0 12.8-5.12 12.8-12.8V294.4c0-7.68-5.12-12.8-12.8-12.8H153.6z" fill="#231C1C"></path>

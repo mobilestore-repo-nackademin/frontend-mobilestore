@@ -4,9 +4,7 @@ import Header from './Components/Header.jsx';
 import Navbar from './Components/Navbar.jsx';
 import Footer from './Components/Footer.jsx';
 import Home from './Homepage/Homepage.jsx';
-import Chargers from './Chargers/Charger.jsx';
-import Cases from './Cases/Cases.jsx';
-import Phones from './Phone/Phonepage.jsx';
+
 import Support from './SupportPage/SupportPage.jsx';
 import AboutUs from './AboutUsPage/Aboutus.jsx';
 import Products from './Products/Products.jsx';
@@ -19,7 +17,7 @@ import ConfirmedPage from './PaymentComponents/ConfirmedPage.jsx';
 import InvoicePayment from './PaymentComponents/InvoicePayment.jsx';
 import ShoppingCartPage from './PaymentComponents/ShoppingCartPage.jsx';
 import HomeDelivery from './PaymentComponents/HomeDelivery.jsx';
-import FAQ from './FAQPage/FAQ.jsx';
+import FAQ from './FAQPage/FAQFile.jsx';
 import BytenReturer from './BytenReturerPage/BytenReturer.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
 import { FormProvider } from './Context/FormContext';
@@ -33,9 +31,7 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Phones" element={<Phones />} />
-        <Route path="/Chargers" element={<Chargers />} />
-        <Route path="/Cases" element={<Cases />} />
+        
         <Route path="/Support" element={<Support />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Products" element={<Products />} />
