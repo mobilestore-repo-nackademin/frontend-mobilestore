@@ -1,0 +1,40 @@
+.BytenReturer {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .BytenReturer h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .BytenReturer h3 {
+    color: #666;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .BytenReturer p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .BytenReturer ul {
+    list-style-type: disc;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .BytenReturer li {
+    margin-left: 20px;
+  }
+
+  .img1 {
+    width: 30%;
+  }
+  
