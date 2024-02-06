@@ -25,7 +25,7 @@ const Products = () => {
   }, []);
 
   return (
-    <div>
+    <div className='productContainer'>
       <div className="product-list">
         {products.map((product) => {
           const attributes = product.attributes || {};

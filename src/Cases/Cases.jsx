@@ -39,6 +39,7 @@ const CasePage = () => {
   }, []);
 
   return (
+    <div className='productContainer'>
     <div className="product-list">
       {/* Lägg till eventuella andra komponenter här */}
 
@@ -55,6 +56,7 @@ const CasePage = () => {
           </div>
         );
       })}
+    </div>
     </div>
   );
 };

@@ -19,7 +19,7 @@ import ConfirmedPage from './PaymentComponents/ConfirmedPage.jsx';
 import InvoicePayment from './PaymentComponents/InvoicePayment.jsx';
 import ShoppingCartPage from './PaymentComponents/ShoppingCartPage.jsx';
 import HomeDelivery from './PaymentComponents/HomeDelivery.jsx';
-import FAQ from './FAQPage/FAQ.jsx';
+import FAQ from './FAQPage/FAQFile.jsx';
 import BytenReturer from './BytenReturerPage/BytenReturer.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
 import { FormProvider } from './Context/FormContext';

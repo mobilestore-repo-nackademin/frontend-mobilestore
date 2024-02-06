@@ -1,10 +1,10 @@
 import React from "react";
-import FAQ from "./FAQ";
+import FAQ from './FAQ.jsx'
 
 const FAQPage = () => {
     return (
-        <div>
-            <FAQFile />      
+        <div className='container'>
+            <FAQ/>      
         </div>
     );
 };

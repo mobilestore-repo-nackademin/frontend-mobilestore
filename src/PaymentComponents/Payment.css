@@ -1,13 +1,15 @@
 
 .boxpay {
   max-width: 940px;
+  width: 100%; /* Använd 100% bredd så att det är responsivt */
+  margin: auto; /* Centrera elementet */
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-rows: auto 1fr auto;
-  gap: 20px;
+  justify-content: center;
 }
 
 h5 {
@@ -16,11 +18,12 @@ h5 {
 }
 
 form {
-  display: grid;
-  grid-template-columns: 20% 1fr;
-  align-items: center;
-  gap: 10px;
-  grid-row: 2;
+  max-width: 940px;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  
 }
 
 label {
@@ -29,7 +32,7 @@ label {
 
 input,
 select {
-  width: 100%;
+  width: 30%;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -37,6 +40,7 @@ select {
 }
 
 button {
+  grid-column: span 2; /* Fyll två kolumner */
   width: 100%;
   padding: 10px;
   background-color: #4caf50;
@@ -79,15 +83,33 @@ button:hover {
 
 }
 .grid-confirm {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px; /* Justera gapet mellan rutor efter behov */
-  justify-content: center; /* Centrera inom föräldern */
-  margin: 20px; /* Justera marginalen efter behov */
+
+  justify-content: center;
+  text-align: center;
 }
 
 .grid-confirm-item {
   border: 1px solid #ddd; /* Ram för att markera varje ruta */
   padding: 20px; /* Justera padding efter behov */
   text-align: center; /* Centrera innehållet horisontellt */
+}
+.grid-container {
+  display: flex;
+  justify-content: space-around; /* Lägg till utrymme mellan grid-item */
+  align-items: center; /* Centrera vertikalt */
+  max-width: 940px;
+  width: 100%;
+  margin: 10% 20% 20% auto;
+}
+
+.grid-item {
+  text-align: center; /* Centrera innehållet horisontellt */
+}
+.h2-payment{
+  color: black;
+
+}
+.thx{
+  justify-content: center;
+  text-align: center;
 }

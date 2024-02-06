@@ -39,6 +39,7 @@ const ChargerPage = () => {
   }, []);
 
   return (
+    <div className='productContainer'>
     <div className="product-list">
       {/* Lägg till eventuella andra komponenter här */}
 
@@ -55,6 +56,7 @@ const ChargerPage = () => {
           </div>
         );
       })}
+    </div>
     </div>
   );
 };
