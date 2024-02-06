@@ -3,6 +3,13 @@ import "./BytenReturer.css"
 
 const BytenReturer = () => {
     return (
+<<<<<<< HEAD
+=======
+
+      <div className="BytenReturer">
+        <img className="img1" src="./photos/Returnphone.png" />  
+
+>>>>>>> 6cb1b45646d92eb7e3a32ea85c28d0db8c596c3a
       <div className="container">
 
         <img className="ReturnPhoto" src="./photos/support.1.png" alt="" />
@@ -24,6 +31,7 @@ const BytenReturer = () => {
         <p>Om du vill returnera en produkt av andra skäl, vänligen kontakta oss på MobileShopSupport@hotmail.com för returinstruktioner.</p>
         <p>För att vara berättigad till retur, måste produkten vara oanvänd och i samma skick som du mottog den. Returfrakten kan vara kundens ansvar beroende på orsaken till returen.</p>
         <p>Vi kommer att behandla returärendet så snart vi har mottagit och granskat produkten.</p>
+      </div>
       </div>
     );
   };

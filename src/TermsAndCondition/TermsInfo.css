@@ -1,74 +1,72 @@
 
+.term-heading {
+    padding: 5px;
+    text-align: center;
+    font-size: 21px;
+    order: -1;
+    width: 100%;
+}
+
 .term {
     padding: 10px;
-    max-width: 560px;
+    max-width: 960px;
     width: 95%;
     margin: 20px auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
-
-}
-
-.term-heading {
-    padding: 5px;
-    text-align: center;
-    font-size: 21px;
-
-
+    align-items: center; /* Centrera elementen vertikalt */
 }
 
 .term-intro {
     padding: 5px;
     text-align: center;
     font-size: 15px;
-
 }
-
-
 
 .term-section {
-
-
     flex: 1;
     border: 1px solid #dddddd;
-    margin: 2px;
-    padding: 2px;
+    margin: 5px;
+    padding: 10px;
     background: white;
     transition: 0.3s;
+    width: 60%;
+    height: 32em;
 }
 
-
-    .term-section:hover {
+.term-section:hover {
     background-color: #e0e0e0;
 }
+
 .term-section.with-icon h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .term-section.with-icon h3 img {
     margin-bottom: 10px;
+    max-width: 100%;
 }
-
 
 .term-section p {
     font-size: 14px;
     color: #444;
-    margin-top: 10px
+    margin-top: 10px;
+}
 
+.term-section.with-icon h2 img {
+    max-width: 60px;
+    height: 6em;
 }
-.term-section h2 {
-    margin: 0;
-}
-.terms-icon{
-    width: 100%;
-    height: 70%;
-    margin-top: 100px;
 
 
+.term-section:nth-child(2) {
+    order: 1;
 }
+
+
 
 
 

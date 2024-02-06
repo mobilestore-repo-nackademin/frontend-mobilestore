@@ -86,16 +86,25 @@ margin-right: 1em;
 }
 .grid-confirm {
   display: grid;
+<<<<<<< HEAD
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+
   grid-template-columns: repeat(2, 1fr); /* Skapar 2 kolumner med lika stor bredd */
   gap: 1em; /* Avstånd mellan rutorna */
   justify-content: center;
   text-align: center;
+
 }
 
 .grid-confirm-item {
   border: 1px solid #ddd;
   padding: 20px;
   text-align: center;
+
+
 }
 .grid-container {
   display: flex;
@@ -116,4 +125,5 @@ margin-right: 1em;
 .thx{
   justify-content: center;
   text-align: center;
+
 }
