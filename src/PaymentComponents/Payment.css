@@ -41,7 +41,7 @@ select {
 
 button {
   grid-column: span 2; /* Fyll två kolumner */
-  width: 100%;
+  width: auto;
   padding: 10px;
   background-color: #4caf50;
   color: white;
@@ -63,13 +63,15 @@ button:hover {
 .FK_icon-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-top: 10px;
+  justify-content: center;
+  text-align: center;
+ 
 }
 
 .FK_icon {
-  max-width: 30em;
-  margin-right: 230px;
+width: 15em;
+height: auto;
+margin-right: 1em;
 }
 
 .grid-item{
@@ -83,22 +85,24 @@ button:hover {
 
 }
 .grid-confirm {
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Skapar 2 kolumner med lika stor bredd */
+  gap: 1em; /* Avstånd mellan rutorna */
   justify-content: center;
   text-align: center;
 }
 
 .grid-confirm-item {
-  border: 1px solid #ddd; /* Ram för att markera varje ruta */
-  padding: 20px; /* Justera padding efter behov */
-  text-align: center; /* Centrera innehållet horisontellt */
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
 }
 .grid-container {
   display: flex;
   justify-content: space-around; /* Lägg till utrymme mellan grid-item */
   align-items: center; /* Centrera vertikalt */
   max-width: 940px;
-  width: 100%;
+  width: 80%;
   margin: 10% 20% 20% auto;
 }
 
