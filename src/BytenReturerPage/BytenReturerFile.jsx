@@ -4,7 +4,7 @@ import BytenReturer from "./BytenReturer";
 const BytenReturerPage = () => {
     return (
         <div >
-            <BytenReturerFile />      
+            <BytenReturer />      
         </div>
     );
 };

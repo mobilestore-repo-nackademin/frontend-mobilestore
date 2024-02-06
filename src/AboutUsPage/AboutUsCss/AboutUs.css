@@ -1,20 +1,9 @@
-
-
-
-.bol{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: 15px;
-
-
-
+.heroAbout{
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    align-items: center;
 }
-.bol h2 {
-    padding-left: 15px;
-}
-
-
 img:hover{
     transform: translateY(1.3px);
 }
@@ -24,8 +13,6 @@ img:hover{
     height: 150px;
     border-radius: 10px;
     margin-left: 135px;
-
-
 }
 
 .Heroimgaboutus2{
@@ -33,16 +20,13 @@ img:hover{
     display: inline-block;
     height: 150px;
     border-radius: 10px;
-
 }
-.Heroimgaboutus3{
+.Heroimgaboutus{
     display: inline-block;
     width: 25%;
     height: 150px;
     border-radius: 10px;
 }
-
-
 
 .social-icons {
     display: flex;
@@ -60,19 +44,6 @@ img:hover{
     color: #e74c3c;
 }
 
-
-.hero1 {
-    margin-top: 20px;
-    padding-left: 15px;
-}
-
-
-
-.hero1 p{
-    font-size: 16px;
-    line-height: 1.5;
-    color: black;
-}
 @media screen and (max-width: 768px) {
     /* body {
         font-size: 14px;
@@ -82,8 +53,6 @@ img:hover{
         padding: 10px;
     } */
 }
-
-/* Ytterligare responsiva stilar för ännu mindre skärmstorlekar om det behövs */
 
 @media screen and (max-width: 480px) {
     /* body {
