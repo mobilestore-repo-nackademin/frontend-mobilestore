@@ -30,6 +30,7 @@ height: auto;
 .h1-header {
   text-align: center; /* Om du vill använda text-align för säkerhets skull */
   color: #fff;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .cartContainer{

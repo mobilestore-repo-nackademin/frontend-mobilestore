@@ -71,6 +71,7 @@ const PaymentPage = () => {
     };
 
     return (
+        <div className='container'>
         <div className="boxpay">
             <h5>Betalningsinformation.</h5>
             <form className="bella">
@@ -114,6 +115,7 @@ const PaymentPage = () => {
 
 
             <img className='betalning-icon' src="../../photos/betalnings.jpg" alt="" />
+        </div>
         </div>
     );
 };

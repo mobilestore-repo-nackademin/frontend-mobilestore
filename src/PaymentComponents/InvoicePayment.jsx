@@ -31,7 +31,7 @@ const InvoicePayment = () => {
 
   return (
       <div className="container">
-        <h4>Kontaktuppgifter</h4>
+        <h4 className='thx'>Kontaktuppgifter</h4>
         <form>
           <div className="form-group">
             <label htmlFor="name">Fullständiga Namn:</label>
@@ -44,6 +44,7 @@ const InvoicePayment = () => {
                 required
             />
           </div>
+          <br />
           <div className="form-group">
             <label htmlFor="street">GataNamn:</label>
             <input
@@ -55,6 +56,7 @@ const InvoicePayment = () => {
                 required
             />
           </div>
+          <br />
           <div className="form-group">
             <label htmlFor="city">PostOrt:</label>
             <input
@@ -66,6 +68,7 @@ const InvoicePayment = () => {
                 required
             />
           </div>
+          <br />
           <div className="form-group">
             <label htmlFor="zipcode">PostNummer:</label>
             <input
@@ -78,6 +81,7 @@ const InvoicePayment = () => {
                 required
             />
           </div>
+          <br />
           <div className="form-group">
             <label htmlFor="personalNumber">PersonNummer:</label>
             <input
@@ -91,6 +95,7 @@ const InvoicePayment = () => {
             />
 
           </div>
+          <br />
           <Link to="/ConfirmedPage">
             <button className="betalning-button" onClick={handleConfirmation}> Bekräfta Informatinen</button>
           </Link>

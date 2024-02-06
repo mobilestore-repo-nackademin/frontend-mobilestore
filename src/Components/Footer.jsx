@@ -12,19 +12,19 @@ const Footer = () => {
       </div>
       <div className="column">
 
-        <ul>
+        <ul className='FooterUl'>
             {/* Sätt in A tagg på alla länkar */}
-            <li>FAQ</li>
-            <li>About Us</li>
-            <li>Forum</li>
-            <li>Contact</li>
-            <li>Support</li>
+           <Link to='/AboutUs'><li className='FooterLi'>MobileStore</li></Link>
+           <Link to='/BytenReturer'><li className='FooterLi'>Byten & Returer</li></Link>
+           <Link to='/Delivery'><li className='FooterLi'>Leverans</li></Link>
+           <Link to='/Support'><li className='FooterLi'>Kontakt</li></Link>
+           <Link to='/Terms'><li className='FooterLi'>Köpvilkor</li></Link>
+           <Link to='/FAQ'><li className='FooterLi'>FAQ</li></Link>
         </ul>
       </div>
       <div className="column">
-        <h2>Mobilestore</h2>
-        <h4>Address</h4>
-        <p>Blabla vägen 2, Stockholm</p>
+        <h1>Mobilestore</h1>
+
       </div>
     </footer>
     );

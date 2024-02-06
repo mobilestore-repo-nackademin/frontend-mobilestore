@@ -1,98 +1,55 @@
-
-
-
-.bol{
+.heroAbout {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-top: 15px;
-
-
-
-}
-.bol h2 {
-    padding-left: 15px;
-}
-
-
-img:hover{
-    transform: translateY(1.3px);
-}
-.Heroimgaboutus{
-    display:inline-block;
-    width: 25%;
-    height: 150px;
-    border-radius: 10px;
-    margin-left: 135px;
+    flex-direction: row; /* Placera elementen horisontellt */
+    flex-wrap: wrap; /* Wrap till nästa rad om det inte finns tillräckligt med utrymme */
+    justify-content: space-between; /* Placera boxarna jämnt fördelade över utrymmet */
 
 
 }
-
-.Heroimgaboutus2{
-    width:30% ;
-    display: inline-block;
-    height: 150px;
-    border-radius: 10px;
-
-}
-.Heroimgaboutus3{
-    display: inline-block;
-    width: 25%;
-    height: 150px;
-    border-radius: 10px;
+.aboutheros {
+    width: 100%; /* Säkerställer att rubriken tar upp hela bredden */
+    text-align: center; /* Centrera texten */
+    margin-bottom: 20px; /* Avstånd under rubriken */
+    order: -1; /* Placera rubriken först i ordningen */
 }
 
-
+.heroAboutBox {
+    flex: 1;
+    border: 1px solid #dddddd;
+    margin: 5px;
+    padding: 10px;
+    background: white;
+    transition: 0.3s;
+    width: 80%;
+    height: 45em;
+    border-radius: 5px;
+}
+.heroAboutBox:hover{
+    background-color: #e0e0e0;
+}
 
 .social-icons {
     display: flex;
-    justify-content: space-around;
-    font-size: 24px;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+
 }
 
 .social-icons a {
-    color: grey;
-    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+
 }
 
 .social-icons a:hover {
-    color: #e74c3c;
-}
-
-
-.hero1 {
-    margin-top: 20px;
-    padding-left: 15px;
-}
-
-
-
-.hero1 p{
-    font-size: 16px;
-    line-height: 1.5;
-    color: black;
-}
-@media screen and (max-width: 768px) {
-    /* body {
-        font-size: 14px;
-    } */
-
-    /* .container {
-        padding: 10px;
-    } */
-}
-
-/* Ytterligare responsiva stilar för ännu mindre skärmstorlekar om det behövs */
-
-@media screen and (max-width: 480px) {
-    /* body {
-        font-size: 12px;
-    } */
-
-    /* .container {
-        padding: 5px;
-    } */
+    color: #007bff;
 }
 
 

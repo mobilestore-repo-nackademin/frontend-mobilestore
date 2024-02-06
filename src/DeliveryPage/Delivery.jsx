@@ -5,7 +5,7 @@ import DeliveryPage from "./DeliveryInfo.jsx";
 
 const Delivery = () => {
     return (
-        <div>
+        <div className='container'>
             <DeliveryPage />      
         </div>
     );

@@ -4,7 +4,7 @@ import Support from './Support.jsx';
 
 const SupportPage = () => {
   return (
-    <div>
+    <div className='container'>
       <Support />
 
     </div>
