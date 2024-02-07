@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './Support.css';
+import MapComponent from './MapComponent.jsx';
 
 export const ContactUs = () => {
   const form = useRef();
@@ -28,18 +29,38 @@ export const ContactUs = () => {
   };
 
   return (
-    <div>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Din Epost</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
-      {successMessage && <div style={{ color: 'green' }}>{successMessage}</div>}
-      {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
+    <div className="containerEmail">
+    <div className="ContactBox1">
+    <form ref={form} onSubmit={sendEmail}>
+  <div className="form-row">
+    <label htmlFor="user_name">Name</label>
+    <input className='ContactInputs' type="text" id="user_name" name="user_name" />
+  </div>
+  <div className="form-row">
+    <label htmlFor="user_email">Din Epost</label>
+    <input className='ContactInputs' type="email" id="user_email" name="user_email" />
+  </div>
+  <div className="form-row">
+    <label htmlFor="message">Message</label>
+    <textarea className='ContactInputs' id="message" name="message" />
+  </div>
+  <div className="form-row">
+    <input className='EmailSubmit' type="submit" value="Send" />
+  </div>
+</form>
+{successMessage && <div style={{ color: 'green' }}>{successMessage}</div>}
+{errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
+
+<img className='contactPhoto' src="./photos/mobilestore.png" alt="" />
+
+    </div>
+    <div className="ContactBox2">
+      <h2>Telefonnummer</h2>
+      <p>070 123 45 67</p>
+    </div>
+    <div className="ContactBox3">
+        <MapComponent/>
+    </div>
     </div>
   );
 };

@@ -19,7 +19,7 @@
 .heroAboutBox {
     flex: 1;
     border: 1px solid #dddddd;
-    margin: 5px;
+    margin: 1em;
     padding: 10px;
     background: white;
     transition: 0.3s;
@@ -52,6 +52,10 @@
     color: #007bff;
 }
 
-
+/* .AboutUsContainer{
+    background-image: url(/photos/herophoto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
 
