@@ -2,38 +2,33 @@
 
 
 
-
 .deliver {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-
-
-
 }
 
 .delivery-heading,
 .delivery-info {
-    width: 20%;
-    margin-bottom:20px;
-    padding: 10px;
-    border: 1px solid #dddddd;
+    flex: 1 0 calc(20% - 20px); /* Adjust width with margin */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Soften border color */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.handslag {
+    width: 100%;
+    height: auto; /* Ensure image aspect ratio is maintained */
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Add some space below the images */
+}
+
 .delivery-photo{
-    max-width: 100%;
-    height: 270px;
-
+    height: 65%;
+    
 }
-.handslag{
-    max-width: 100%;
-    height: 120px;
-
-}
-
-
 
 
 

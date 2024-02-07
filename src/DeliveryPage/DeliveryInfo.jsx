@@ -34,7 +34,7 @@ const DeliveryTerms = () => {
                 <p>Om du har frågor om leveransen eller vill ha mer information, vänligen kontakta vår kundtjänst.</p>
             </div>
             <div>
-                <img className= 'delivery-photo' src="../../photos/delivery-photo.jpg" alt=""/>
+                <img className= 'delivery-photo' src="./photos/leveransbil.png" alt=""/>
             </div>
 
         </div>
