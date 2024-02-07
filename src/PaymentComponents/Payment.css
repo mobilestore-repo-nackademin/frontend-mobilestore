@@ -29,9 +29,7 @@ form {
 label {
   margin-bottom: 10px;
 }
-
-input,
-select {
+.CardInput {
   width: 30%;
   padding: 8px;
   border: 1px solid #ddd;

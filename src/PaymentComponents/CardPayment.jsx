@@ -77,28 +77,28 @@ const PaymentPage = () => {
             <form className="bella">
                 <label>
                     Kortinnehavarens namn:
-                    <input type="text" value={cardHolderName} onChange={handleCardHolderNameChange} required />
+                    <input className='CardInput' type="text" value={cardHolderName} onChange={handleCardHolderNameChange} required />
                 </label>
 
                 <br />
 
                 <label>
                     Kortnummer:
-                    <input type="text" value={cardNumber} onChange={handleCardNumberChange} required />
+                    <input className='CardInput' type="text" value={cardNumber} onChange={handleCardNumberChange} required />
                 </label>
 
                 <br />
 
                 <label>
                     Giltighetsmånad och år:
-                    <input type="month" value={expiryMonthYear} onChange={handleExpiryMonthYearChange} required />
+                    <input className='CardInput' type="month" value={expiryMonthYear} onChange={handleExpiryMonthYearChange} required />
                 </label>
 
                 <br />
 
                 <label>
                     CVV:
-                    <input type="text" value={cvv} onChange={handleCVVChange} maxLength="3" required />
+                    <input className='CardInput' type="text" value={cvv} onChange={handleCVVChange} maxLength="3" required />
                 </label>
 
                 <br />
