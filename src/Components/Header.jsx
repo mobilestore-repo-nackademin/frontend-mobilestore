@@ -30,7 +30,7 @@ const Header = () => {
         <img className="logo-img-header" src="./photos/mobilestore.png" alt="our-logo" />
       </div>
       <div className="emptySpaceContainer">
-        <h1 className="h1-header">MobileStore</h1>
+        <h1 className="h1-header">𝕄𝕠𝕓𝕚𝕝𝕖𝕊𝕥𝕠𝕣𝕖</h1>
       </div>
       <div className="cartContainer">
         <div className="cart-icon" onClick={toggleCartVisibility}>
