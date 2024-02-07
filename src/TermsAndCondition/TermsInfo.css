@@ -1,15 +1,5 @@
-
-.term-heading {
-    padding: 5px;
-    text-align: center;
-    font-size: 21px;
-    order: -1;
-    width: 100%;
-}
-
 .term {
     padding: 10px;
-    max-width: 960px;
     width: 95%;
     margin: 20px auto;
     display: flex;
@@ -28,10 +18,10 @@
     flex: 1;
     border: 1px solid #dddddd;
     margin: 5px;
-    padding: 10px;
+    padding: 2em;
     background: white;
     transition: 0.3s;
-    width: 60%;
+    width: 45em;
     height: 32em;
 }
 
@@ -55,12 +45,6 @@
     color: #444;
     margin-top: 10px;
 }
-
-.term-section.with-icon h2 img {
-    max-width: 60px;
-    height: 6em;
-}
-
 
 .term-section:nth-child(2) {
     order: 1;

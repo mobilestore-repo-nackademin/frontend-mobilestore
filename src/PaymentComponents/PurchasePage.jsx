@@ -5,7 +5,7 @@ import MyTabsComponent from './MyTabsComponent';
 const PurchasePage = () => {
   return (
     <div>
-      <h1>Köpsida</h1>
+      <h1></h1>
       <MyTabsComponent />
     </div>
   );

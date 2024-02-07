@@ -28,7 +28,7 @@ const InvoicePayment = ({ onTabCompletion }) => {
     onTabCompletion(0);
     navigate('/ConfirmedPage');
   };
-
+ 
   return (
       <div className="container">
         <h4 className='thx'>Kontaktuppgifter</h4>
@@ -44,7 +44,6 @@ const InvoicePayment = ({ onTabCompletion }) => {
                 required
             />
           </div>
-          <br />
           <div className="form-group">
             <label htmlFor="street">GataNamn:</label>
             <input
@@ -56,7 +55,6 @@ const InvoicePayment = ({ onTabCompletion }) => {
                 required
             />
           </div>
-          <br />
           <div className="form-group">
             <label htmlFor="city">PostOrt:</label>
             <input
@@ -68,7 +66,6 @@ const InvoicePayment = ({ onTabCompletion }) => {
                 required
             />
           </div>
-          <br />
           <div className="form-group">
             <label htmlFor="zipcode">PostNummer:</label>
             <input
@@ -81,7 +78,7 @@ const InvoicePayment = ({ onTabCompletion }) => {
                 required
             />
           </div>
-          <br />
+          
           <div className="form-group">
             <label htmlFor="personalNumber">PersonNummer:</label>
             <input
@@ -95,7 +92,7 @@ const InvoicePayment = ({ onTabCompletion }) => {
             />
 
           </div>
-          <br />
+        
           <Link to="/ConfirmedPage">
             <button className="betalning-button" onClick={() => handleConfirmation(0)}> Bekräfta Informatinen</button>
           </Link>
@@ -103,8 +100,8 @@ const InvoicePayment = ({ onTabCompletion }) => {
         <div className="FK_icon-container">
 
 
-          <img className="FK_icon" src="../../photos/faktura-bild-05.webp" alt=""/>
-          <img className="FK_icon" src="../../photos/faktura-bild-06.webp" alt=""/>
+          <img className="FK_icon" src="../../photos/betalningsbild.png" alt=""/>
+          <img className="FK_icon" src="../../photos/betalningsbild2.png" alt=""/>
         </div>
 
       </div>

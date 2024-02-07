@@ -1,9 +1,7 @@
 .faq-container {
   padding-top: 40px; /* Adjust as needed */
-  margin-top: 5em;
+  margin-top: 2em;
 }
-
-
 
 .faq-list {
   display: flex;

@@ -5,13 +5,14 @@ const BytenReturer = () => {
   return (
       <div className="container">
         <div className="BytenReturer">
-          <h2>Reklamation och Retur</h2>
-          <p>Vi beklagar om du har några problem med ditt köp. Nedan finns information om hur du kan reklamera eller returnera produkter.</p>
+          <h1 className="h1-pages">Reklamation och Retur</h1>
            <img className="img1" src="../../photos/information.png" alt="Reklamation och Retur" />
 
           <div className="content">
             <div className="text">
               <h3>Reklamation</h3>
+              <p>Vi beklagar om du har några problem med ditt köp. Nedan finns information om hur du kan reklamera eller returnera produkter.</p>
+
               <p>Om du upptäcker att din produkt är defekt eller har några andra problem, vänligen kontakta vår kundtjänst så snart som möjligt på MobileShopSupport@hotmail.com.</p>
               <p>För att underlätta processen, vänligen inkludera följande information:</p>
               <ul>

@@ -95,7 +95,6 @@ height: auto;
 .quantity-buttons {
   display: flex;
   gap: 5px; /* Justera detta värde efter behov */
-
 }
 
 .quantity-buttons-minus {

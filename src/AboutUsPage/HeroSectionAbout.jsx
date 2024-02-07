@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutUsCss/AboutUs.css';
-
+import SocialIcons from "./SocialIcons.jsx";
 const AboutUsPage = () => {
     return (
         <div className='AboutUsContainer'>
@@ -31,8 +31,9 @@ const AboutUsPage = () => {
                             Upptäck vårt sortiment idag och låt oss vara din pålitliga partner i mobilteknologi
                         </p>
                     </div>
-                </div>
+                </div><SocialIcons/>
             </div>
+
         </div>
     );
 };

@@ -1,5 +1,4 @@
-
-
+import './Payment.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 import {Link} from "react-router-dom";
@@ -72,36 +71,32 @@ const PaymentPage = () => {
 
     return (
         <div className='container'>
-        <div className="boxpay">
-            <h5>Betalningsinformation.</h5>
-            <form className="bella">
-                <label>
-                    Kortinnehavarens namn:
+        
+            <h4>Betalningsinformation.</h4>
+            <form>
+            <div className="form-group">
+                <label>Kortinnehavarens namn:</label>
                     <input className='CardInput' type="text" value={cardHolderName} onChange={handleCardHolderNameChange} required />
-                </label>
-
-                <br />
-
-                <label>
-                    Kortnummer:
+                
+                </div>
+               
+                <div className="form-group">
+                <label>Kortnummer:</label>
                     <input className='CardInput' type="text" value={cardNumber} onChange={handleCardNumberChange} required />
-                </label>
+                </div>
+              
+                <div className="form-group">
+                <label>Giltighetsmånad och år:</label>
+                <input className='CardInput' type="month" value={expiryMonthYear} onChange={handleExpiryMonthYearChange} required />
+                
+                </div>
+                <div className="form-group">
 
-                <br />
-
-                <label>
-                    Giltighetsmånad och år:
-                    <input className='CardInput' type="month" value={expiryMonthYear} onChange={handleExpiryMonthYearChange} required />
-                </label>
-
-                <br />
-
-                <label>
-                    CVV:
-                    <input className='CardInput' type="text" value={cvv} onChange={handleCVVChange} maxLength="3" required />
-                </label>
-
-                <br />
+                <label>CVV:</label>
+                <input className='CardInput' type="text" value={cvv} onChange={handleCVVChange} maxLength="3" required />
+                
+                </div>
+              
 
                 <Link to="/ConfirmedPage">
                     <button className="but" onClick={handlePaymentSubmit}>
@@ -116,7 +111,7 @@ const PaymentPage = () => {
 
             <img className='betalning-icon' src="../../photos/betalnings.jpg" alt="" />
         </div>
-        </div>
+        
     );
 };
 

@@ -38,8 +38,7 @@ const Header = () => {
           
         </div>
       </div>
-
-      {/* Lägg till överlagring (overlay) och CartPopup */}
+      
       {isCartVisible && (
         <>
           <div className="overlay" onClick={toggleCartVisibility}></div>

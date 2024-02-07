@@ -5,31 +5,31 @@ const DeliveryTerms = () => {
     return (
         <div className="deliver">
             <div className='header'>
-                <h1>Delivery Information</h1>
+                <h1 className='h1-pages'>Delivery Information</h1>
             </div>
 
             <div className="delivery-info">
-                <h5>1. Leveranstid</h5>
+                <h2>1. Leveranstid</h2>
                 <p>Vi strävar efter att leverera dina produkter så snabbt som möjligt. Leveranstiden kan variera beroende på din plats och produktens tillgänglighet. Kontakta vår kundtjänst för specifik information om leveranstiden för din beställning.</p>
             </div>
 
             <div className="delivery-info">
-                <h5>2. Fraktkostnad</h5>
+                <h2>2. Fraktkostnad</h2>
                 <p>Fraktkostnader kan tillkomma och varierar beroende på leveransadress och valt fraktsätt. Du kommer att informeras om fraktkostnaderna i kassan innan du slutför din beställning.</p>
             </div>
 
             <div className="delivery-info">
-                <h5>3. Leveransmetoder</h5>
+                <h2>3. Leveransmetoder</h2>
                 <p>Vi erbjuder olika leveransmetoder för att möta dina behov. Välj den som passar dig bäst vid kassan.</p>
             </div>
 
             <div className="delivery-info">
-                <h5>4. Följ din beställning</h5>
+                <h2>4. Följ din beställning</h2>
                 <p>Efter att din beställning har skickats kommer du att få en bekräftelse via e-post med en länk för att följa din beställning online.</p>
             </div>
 
             <div className="delivery-info">
-                <h5>5. Kundtjänst</h5>
+                <h2>5. Kundtjänst</h2>
                 <p>Välkommen till den coolaste mobilupplevelsen någonsin! Vårt gäng på kundservice är som den bästa backstage-passet till din mobilvärld, redo att rocka din vardag och fixa alla dina mobila äventyr.
 
 När du ringer in till oss, är det som att slå tonerna till din favoritlåt. Våra kundtjänsthjältar är inte bara tekniknördar, de är också partyplanerare för din digitala fest! Inga frågor är för stora eller för små – vi är här för att göra tekniken lika smidig som din favoritmelodi.

@@ -43,7 +43,6 @@ const HomeDelivery = ({ onTabCompletion }) => {
             required
           />
         </div>
-        <br />
         <div className="form-group">
           <label htmlFor="addressDelivery">Adress:</label>
           <input
@@ -55,7 +54,6 @@ const HomeDelivery = ({ onTabCompletion }) => {
             required
           />
         </div>
-        <br />
         <div className="form-group">
           <label htmlFor="cityDelivery">Postort:</label>
           <input
@@ -67,7 +65,6 @@ const HomeDelivery = ({ onTabCompletion }) => {
             required
           />
         </div>
-        <br />
         <div className="form-group">
           <label htmlFor="zipCodeDelivery">Postnummer:</label>
           <input
@@ -80,7 +77,6 @@ const HomeDelivery = ({ onTabCompletion }) => {
             required
           />
         </div>
-        <br />
         <div className="form-group">
           <label htmlFor="selectedOptionDelivery">Välj ett alternativ:</label>
           <select
@@ -95,9 +91,12 @@ const HomeDelivery = ({ onTabCompletion }) => {
             <option value="option3">16:00 - 19:00</option>
           </select>
         </div>
-          <br />
           <button type="button" onClick={() => handleConfirmation(1)}>Gå vidare</button>
       </form>
+      <div className="FK_icon-container">
+      <img className="FK_icon" src="../../photos/bilbild2.png" alt=""/>
+      
+      </div>
     </div>
   );
 };

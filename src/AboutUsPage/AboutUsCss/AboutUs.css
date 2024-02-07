@@ -1,9 +1,4 @@
 
-.AboutUsContainer {
-    max-width: 960px;
-    margin: 29px auto;
-}
-
 .heroAbout {
     display: flex;
     flex-direction: column;
@@ -11,20 +6,22 @@
 
 .aboutheros {
     text-align: center;
-    font-size: 20px;
-    margin-bottom: 5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 4em;
+    margin-top: 0%;
 }
 
 .heroAboutGrid {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 0;
     justify-content: space-between;
 }
 
 .heroAboutBox {
-    flex: 0 1 calc(50% - 20px);
-    margin-bottom: 10px;
-    padding: 45px; /* Öka paddingen för att ge mer utrymme inuti boxen */
+    flex: 0 1 calc(30% );
+    margin-bottom: 2em;
+    padding: 70px; /* Öka paddingen för att ge mer utrymme inuti boxen */
     border: 1px solid #ddd;
     border-radius: 50%; /* Använd 50% för att skapa cirkelformade boxar */
     text-align: center;
@@ -32,72 +29,35 @@
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centrera text vertikalt */
-}
+    margin-left: 5em;
+    margin-right: 5em;
 
-.heroAboutBox p {
-    font-size: 16px;
-}
+    transition: background-color 0.3s ease; /* Lägg till övergångseffekt */
 
-@media (min-width: 768px) {
-    .heroAboutBox {
-        flex: 0 1 calc(25% - 10px);
+    /* Lägg till en enkel animation för blinkande effekt */
+    animation: blink 2s infinite;
+}
+@keyframes blink {
+    50% {
+        background-color: white;
     }
 }
-
-
-
-
-
-
-
-
-
-/*.heroAbout {*/
-/*    max-width: 800px;*/
-/*    margin: 0 auto;*/
-/*    padding: 20px;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: space-between;*/
-
-
-/*}*/
-/*.aboutheros {*/
-/*    width: 100%;*/
-/*    text-align: center;*/
-/*    margin-bottom: 20px;*/
-/*    order: -1;*/
-/*}*/
-
-/*.heroAboutBox {*/
-/*    flex: 1;*/
-/*    border: 1px solid #dddddd;*/
-/*    margin: 1em;*/
-/*    padding: 10px;*/
-/*    background: white;*/
-/*    transition: 0.3s;*/
-/*    width: 80%;*/
-/*    height: 45em;*/
-/*    border-radius: 5px;*/
-/*}*/
-.heroAboutBox:hover{
-    background-color: #e0e0e0;
+.heroAboutBox p {
+    font-size: 16px;
 }
 
 .social-icons {
     display: flex;
    justify-content: center;
     align-items: center;
-   margin-top: 20px;
-
+    
 }
 
 .social-icons a {
    display: inline-block;
-  margin: 0 10px;
+    margin: 0 10px;
    font-size: 24px;
-  color: #333;
+    color: #333;
    transition: color 0.3s ease;
 
 }

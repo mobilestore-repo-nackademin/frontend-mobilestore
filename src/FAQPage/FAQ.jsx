@@ -4,7 +4,7 @@ import "./FAQ.css";
 const FAQ = () => {
   return (
     <div className="faq-container">      
-      <h1 className="faq-title">Frequently Asked Questions</h1>
+      <h1 className="h1-pages">Frequently Asked Questions</h1>
       <div className="faq-list">
         <div className="faq-card">
           <h3>Hur gör jag en beställning?</h3>

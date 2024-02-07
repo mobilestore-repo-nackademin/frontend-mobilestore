@@ -4,7 +4,7 @@ import React from 'react';
 const PurchaseTerms = () => {
     return (
         <div className="term">
-            <h6 className="term-heading">Välkommen till våra Köpvillkor!</h6>
+            <h1 className="h1-pages">Köpvillkor</h1>
             <div className="term-section with-icon">
                 <h3><img src="../../photos/ship.png" alt="" /> Beställning</h3>
                 <p>
@@ -34,7 +34,7 @@ const PurchaseTerms = () => {
             </div>
 
             <div className="term-section with-icon">
-                <h2><img src="../../photos/support.png" alt="Support Icon" /> Kundtjänst</h2>
+                <h3><img src="../../photos/support.png" alt="Support Icon" /> Kundtjänst</h3>
                 <p>
                     Vår kundtjänst är här för att underlätta din köpupplevelse. Kontakta oss via e-post eller telefon för snabba och pålitliga svar på dina frågor. Ditt nöje är vår prioritet.
                 </p>

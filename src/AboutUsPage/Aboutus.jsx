@@ -8,7 +8,7 @@ const Aboutus = () => {
     return (
         <div className='container'>
             <AboutUsPage />      
-            <SocialIcons/>  
+            
         </div>
     );
 };

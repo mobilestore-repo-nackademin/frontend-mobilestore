@@ -9,9 +9,8 @@
     left: 0;
     width: 100%;
     z-index: 2;
-
   }
-  
+
   .column {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -20,8 +19,6 @@
     height: 9em;
     width: auto;
   }
-
-
 .box_bol {
     display: flex;
     flex-direction: column;
@@ -29,9 +26,6 @@
     padding: 10px;
 
 }
-
-
-
 .FooterUl{
   list-style-type: none;
 }

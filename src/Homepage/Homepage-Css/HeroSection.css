@@ -1,13 +1,3 @@
-/* Homepage.css */
-.container {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Hela skärmens höjd */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
 
 .hero {
   
