@@ -1,12 +1,12 @@
 import React from 'react';
-
 import './DeliveryInfo.css';
-
 
 const DeliveryTerms = () => {
     return (
         <div className="deliver">
-
+            <div className='header'>
+                <h1>Delivery Information</h1>
+            </div>
 
             <div className="delivery-info">
                 <h5>1. Leveranstid</h5>
@@ -28,19 +28,16 @@ const DeliveryTerms = () => {
                 <p>Efter att din beställning har skickats kommer du att få en bekräftelse via e-post med en länk för att följa din beställning online.</p>
             </div>
 
-
             <div className="delivery-info">
                 <h5>5. Kundtjänst</h5>
                 <p>Om du har frågor om leveransen eller vill ha mer information, vänligen kontakta vår kundtjänst.</p>
             </div>
-            <div>
-                <img className= 'delivery-photo' src="./photos/leveransbil.png" alt=""/>
-            </div>
 
+            <div>
+                <img className='delivery-photo' src="./photos/leveransbil.png" alt="" />
+            </div>
         </div>
     );
 };
 
 export default DeliveryTerms;
-
-
