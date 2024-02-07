@@ -32,7 +32,14 @@ export const ContactUs = () => {
     //För att ringa upp
   };
   return (
+    
+    
+    
     <div className="containerEmail">
+    <div className='Header'>
+      <h1>Kontakta Oss</h1>
+    </div>
+    
     <div className="ContactBox1">
     <form ref={form} onSubmit={sendEmail}>
   <div className="form-row">

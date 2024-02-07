@@ -14,7 +14,7 @@ const Footer = () => {
 
         <ul className='FooterUl'>
             {/* Sätt in A tagg på alla länkar */}
-           <Link to='/AboutUs'><li className='FooterLi'>MobileStore</li></Link>
+           <Link to='/AboutUs'><li className='FooterLi'>Om oss</li></Link>
            <Link to='/BytenReturer'><li className='FooterLi'>Byten & Returer</li></Link>
            <Link to='/Delivery'><li className='FooterLi'>Leverans</li></Link>
            <Link to='/Support'><li className='FooterLi'>Kontakt</li></Link>
@@ -23,7 +23,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="column">
-        <h1>Mobilestore</h1>
+        <h1>𝕄𝕠𝕓𝕚𝕝𝕖𝕊𝕥𝕠𝕣𝕖</h1>
 
       </div>
     </footer>

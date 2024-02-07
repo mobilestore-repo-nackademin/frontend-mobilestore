@@ -2,6 +2,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+<<<<<<< HEAD
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  .header {
+    width: 100%; /* Set width to 100% */
+    text-align: center; /* Center align the text */
+  }
+  
+  .header h1 {
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+  
+  .delivery-info {
+    width: 48%; /* Adjust width as needed */
+  }
+  
+  .delivery-photo {
+    max-width: 100%; /* Ensure image responsiveness */
+  }
+  
+=======
     padding: 20px; 
   }
 
@@ -21,3 +43,4 @@
   .delivery-photo {
     max-width: 100%; 
   }
+>>>>>>> b10edfc42113f424bc59c034232d91c7af5efd6a
