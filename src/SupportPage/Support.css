@@ -46,6 +46,7 @@ label {
   width: 5em;
   background-color: green;
   color: white;
+  margin-bottom: 4em;
 }
 
 .Map-contact {
@@ -60,4 +61,9 @@ label {
   width: 20em;
   display: block;
   margin: auto;
+}
+
+.PhoneNumber{
+  font-size:x-large;
+  
 }
