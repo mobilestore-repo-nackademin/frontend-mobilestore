@@ -7,6 +7,7 @@ const BytenReturer = () => {
         <div className="BytenReturer">
           <h2>Reklamation och Retur</h2>
           <p>Vi beklagar om du har några problem med ditt köp. Nedan finns information om hur du kan reklamera eller returnera produkter.</p>
+           <img className="img1" src="../../photos/information.png" alt="Reklamation och Retur" />
 
           <div className="content">
             <div className="text">
@@ -26,7 +27,7 @@ const BytenReturer = () => {
               <p>Vi kommer att behandla returärendet så snart vi har mottagit och granskat produkten.</p>
             </div>
 
-            <img className="img1" src="../../photos/information.png" alt="Reklamation och Retur" />
+
           </div>
         </div>
       </div>
