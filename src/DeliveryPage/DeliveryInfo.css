@@ -2,48 +2,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 5em;
-}
+    padding: 20px; 
+  }
 
-.delivery-heading,
-.delivery-info {
-    flex: 1 0 calc(20% - 20px); /* Adjust width with margin */
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd; /* Soften border color */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  .header {
+    width: 100%; 
+    text-align: center; 
+  }
 
-.handslag {
-    width: 100%;
-    height: auto; /* Ensure image aspect ratio is maintained */
-    border-radius: 10px; /* Rounded corners for images */
-    margin-bottom: 10px; /* Add some space below the images */
-}
+  .header h1 {
+    margin-bottom: 20px; 
+  }
 
-.delivery-photo{
-    height: 65%;
-    
-}
-.delivery-info-customerService{
-    flex: 1 0 calc(20% - 20px); /* Adjust width with margin */
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd; /* Soften border color */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 17em;
-}
+  .delivery-info {
+    width: 48%; 
+  }
 
-
-
-
-
-
-
-
-
-
-
-
+  .delivery-photo {
+    max-width: 100%; 
+  }

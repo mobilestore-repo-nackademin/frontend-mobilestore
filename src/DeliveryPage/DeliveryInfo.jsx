@@ -4,12 +4,9 @@ import './DeliveryInfo.css';
 const DeliveryTerms = () => {
     return (
         <div className="deliver">
-<<<<<<< HEAD
-=======
             <div className='header'>
                 <h1>Delivery Information</h1>
             </div>
->>>>>>> 60692f0017081bf41d95db13071a9e8c739d8c4e
 
             <div className="delivery-info">
                 <h5>1. Leveranstid</h5>
@@ -31,12 +28,7 @@ const DeliveryTerms = () => {
                 <p>Efter att din beställning har skickats kommer du att få en bekräftelse via e-post med en länk för att följa din beställning online.</p>
             </div>
 
-<<<<<<< HEAD
-
-            <div className="delivery-info-customerService">
-=======
             <div className="delivery-info">
->>>>>>> 60692f0017081bf41d95db13071a9e8c739d8c4e
                 <h5>5. Kundtjänst</h5>
                 <p>Välkommen till den coolaste mobilupplevelsen någonsin! Vårt gäng på kundservice är som den bästa backstage-passet till din mobilvärld, redo att rocka din vardag och fixa alla dina mobila äventyr.
 
