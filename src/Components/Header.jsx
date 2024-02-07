@@ -35,7 +35,7 @@ const Header = () => {
       <div className="cartContainer">
         <div className="cart-icon" onClick={toggleCartVisibility}>
           <CartIcon />
-          <span className="cart-count">{cart ? cart.length : 0}</span>
+          
         </div>
       </div>
 

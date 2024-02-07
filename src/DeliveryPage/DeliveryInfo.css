@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+<<<<<<< HEAD
     padding: 20px; /* Add padding for spacing */
   }
   
@@ -22,3 +23,24 @@
     max-width: 100%; /* Ensure image responsiveness */
   }
   
+=======
+    padding: 20px; 
+  }
+
+  .header {
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .header h1 {
+    margin-bottom: 20px; 
+  }
+
+  .delivery-info {
+    width: 48%; 
+  }
+
+  .delivery-photo {
+    max-width: 100%; 
+  }
+>>>>>>> b10edfc42113f424bc59c034232d91c7af5efd6a

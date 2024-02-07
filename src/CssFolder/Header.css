@@ -81,3 +81,36 @@ height: auto;
   background-color: black;
   margin: 10px auto; /* Centrera linjen horisontellt med margin */
 }
+.cart-icon-empty {
+  fill: #ffffff; /* Färg för tom varukorg */
+  transition: fill 0.3s ease; /* Gör en mjuk övergång för färgändringen */
+}
+
+.cart-icon-filled {
+  fill: #00f529; /* Färg för icke-tom varukorg */
+  transition: fill 0.3s ease; /* Gör en mjuk övergång för färgändringen */
+  height: 4em;
+  width: 4em;
+}
+.quantity-buttons {
+  display: flex;
+  gap: 5px; /* Justera detta värde efter behov */
+
+}
+
+.quantity-buttons-minus {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: red; /* Eller annan bakgrundsfärg du föredrar */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+.quantity-buttons-plus {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: green; /* Eller annan bakgrundsfärg du föredrar */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
