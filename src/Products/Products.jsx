@@ -16,6 +16,7 @@ const Products = () => {
   const fetchAllProducts = async () => {
     try {
       const response = await axios.get('http://localhost:1337/api/products?populate=*');
+      console.log('All Products:', response.data.data);
       setProducts(response.data.data);
     } catch (error) {
       console.error('Error fetching all products:', error);
@@ -25,6 +26,7 @@ const Products = () => {
   const fetchProductsByCategory = async (categoryId) => {
     try {
       const categoryResponse = await axios.get(`http://localhost:1337/api/categories/${categoryId}?populate[products][populate]=*`);
+      
       console.log('Category Response:', categoryResponse);
 
       const categoryData = categoryResponse.data && categoryResponse.data.data;
@@ -85,7 +87,8 @@ const Products = () => {
               {photoData.url && <img src={`http://localhost:1337${photoData.url}`} alt={attributes.Title} />}
               <h3>{attributes.Title}</h3>
               <p>{attributes.Description}</p>
-              <p>Pris: {attributes.Price} kr</p>
+              <p>Pris:<strong> {attributes.Price}:- </strong></p>
+              <p>Lagerstatus: <strong>{attributes.Stock}</strong> </p>
               <button onClick={() => handleAddToCart(product)}>Köp</button>
             </div>
           );

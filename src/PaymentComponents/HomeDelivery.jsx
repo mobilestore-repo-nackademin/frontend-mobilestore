@@ -1,12 +1,14 @@
-// HomeDelivery.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useFormContext } from '../Context/FormContext.jsx';
 import './Payment.css';
 
-const HomeDelivery = () => {
+const HomeDelivery = ({ onTabCompletion }) => {
   const { formData, updateFormData } = useFormContext();
-
+  
+  const handleConfirmation = (tabToOpen) => {
+    console.log('handleConfirmation called');
+    onTabCompletion(tabToOpen);
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     updateFormData((prevData) => ({
@@ -17,8 +19,9 @@ const HomeDelivery = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ingen ytterligare behandling behövs här, data uppdateras direkt i FormContext
+    handleConfirmation(0);
   };
+ 
 
   return (
     <div className='container'>
@@ -88,9 +91,7 @@ const HomeDelivery = () => {
           </select>
         </div>
           <br />
-        <Link to="/ChosePayment">
-          <button type="submit">Gå vidare</button>
-        </Link>
+          <button type="button" onClick={() => handleConfirmation(1)}>Gå vidare</button>
       </form>
     </div>
   );

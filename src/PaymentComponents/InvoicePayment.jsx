@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useFormContext } from '../Context/FormContext.jsx';
 import './Payment.css';
 
-const InvoicePayment = () => {
+const InvoicePayment = ({ onTabCompletion }) => {
   const { formData, updateFormData } = useFormContext();
   const navigate = useNavigate();
 
@@ -25,9 +25,8 @@ const InvoicePayment = () => {
   };
 
   const handleConfirmation = () => {
-    // Här kan du lägga till logik för bekräftelse, t.ex. navigering eller API-anrop.
-    // I detta exempel navigerar jag bara till '/ConfirmedPage'.
-    // Använd din faktiska bekräftelselogik här.
+    // Gör något med tabToOpen, till exempel använd det som argument till onTabCompletion
+    onTabCompletion(0);
     navigate('/ConfirmedPage');
   };
 
@@ -99,7 +98,7 @@ const InvoicePayment = () => {
           </div>
           <br />
           <Link to="/ConfirmedPage">
-            <button className="betalning-button" onClick={handleConfirmation}> Bekräfta Informatinen</button>
+            <button className="betalning-button" onClick={() => handleConfirmation(0)}> Bekräfta Informatinen</button>
           </Link>
         </form>
         <div className="FK_icon-container">

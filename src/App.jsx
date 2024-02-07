@@ -4,7 +4,6 @@ import Header from './Components/Header.jsx';
 import Navbar from './Components/Navbar.jsx';
 import Footer from './Components/Footer.jsx';
 import Home from './Homepage/Homepage.jsx';
-
 import Support from './SupportPage/SupportPage.jsx';
 import AboutUs from './AboutUsPage/Aboutus.jsx';
 import Products from './Products/Products.jsx';
@@ -21,6 +20,7 @@ import FAQ from './FAQPage/FAQFile.jsx';
 import BytenReturer from './BytenReturerPage/BytenReturerFile.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
 import { FormProvider } from './Context/FormContext';
+import PurchasePage from './PaymentComponents/PurchasePage.jsx'
 
 const App = () => {
   return (
@@ -46,6 +46,7 @@ const App = () => {
         <Route path="/HomeDelivery" element={<HomeDelivery/>}/>
         <Route path="/FAQ" element={<FAQ/>}/>
         <Route path="/BytenReturer" element={<BytenReturer/>}/>
+        <Route path="/PurchasePage" element={<PurchasePage/>}/>
       </Routes>
       <Footer/>
       </FormProvider>

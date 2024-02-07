@@ -23,9 +23,8 @@ const Footer = () => {
         </ul>
       </div>
       <div className="column">
-        <h2>Mobilestore</h2>
-        <h4>Address</h4>
-        <p>Blabla vägen 2, Stockholm</p>
+        <h1>Mobilestore</h1>
+
       </div>
     </footer>
     );

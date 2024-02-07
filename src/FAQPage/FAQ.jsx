@@ -1,18 +1,16 @@
 import React from 'react';
 import "./FAQ.css";
 
-
 const FAQ = () => {
   return (
-    <div className="faq-list">
-      <div className="faq-card">
-        <h3>Hur gör jag en beställning?</h3>
-        <p>
-          Besök vår webbplats, bläddra igenom produkterna och lägg till önskade varor i din kundvagn. Gå sedan till kassan och slutför din beställning genom att följa instruktionerna.
-        </p>
-      </div>
-
-      <div className="faq-card">
+    <div className="faq-container">      
+      <h1 className="faq-title">Frequently Asked Questions</h1>
+      <div className="faq-list">
+        <div className="faq-card">
+          <h3>Hur gör jag en beställning?</h3>
+          <p>Besök vår webbplats, bläddra igenom produkterna och lägg till önskade varor i din kundvagn. Gå sedan till kassan och slutför din beställning genom att följa instruktionerna.</p>
+        </div>
+        <div className="faq-card">
         <h3>Hur kan jag följa min beställning?</h3>
         <p>
           Efter att din beställning har skickats kommer du att få ett bekräftelse-e-postmeddelande med spårningsinformation. Du kan använda den här informationen för att följa din beställning.
@@ -22,7 +20,7 @@ const FAQ = () => {
       <div className="faq-card">
         <h3>Hur lång tid tar det innan jag får min beställning?</h3>
         <p>
-          Leveranstiden varierar beroende på din plats. Vanligtvis tar det [ange tid] arbetsdagar. Mer information finns på vår sida för leveransinformation.
+          Leveranstiden varierar beroende på din plats. Vanligtvis tar det 5 arbetsdagar. Mer information finns på vår sida för leveransinformation.
         </p>
       </div>
 
@@ -36,7 +34,7 @@ const FAQ = () => {
       <div className="faq-card">
         <h3>Vad händer om jag får en defekt produkt?</h3>
         <p>
-          Om du får en defekt produkt, vänligen kontakta vår kundtjänst inom [ange antal dagar] dagar efter mottagandet. Vi kommer att hjälpa dig med en retur och ersättning.
+          Om du får en defekt produkt, vänligen kontakta vår kundtjänst inom 14 dagar efter mottagandet. Vi kommer att hjälpa dig med en retur och ersättning.
         </p>
       </div>
 
@@ -59,6 +57,7 @@ const FAQ = () => {
         <p>
           Ja, du kan returnera produkter inom [12] dagar efter mottagandet för återbetalning. Vänligen se vår returpolicy för detaljer och hur du kan starta en retur.
         </p>
+      </div>
       </div>
     </div>
   );
