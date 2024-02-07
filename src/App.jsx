@@ -25,13 +25,12 @@ import PurchasePage from './PaymentComponents/PurchasePage.jsx'
 const App = () => {
   return (
     <Router>
-      <CartProvider>
+        <CartProvider>
         <FormProvider>
       <Header/>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        
         <Route path="/Support" element={<Support />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Products" element={<Products />} />
@@ -49,8 +48,8 @@ const App = () => {
         <Route path="/PurchasePage" element={<PurchasePage/>}/>
       </Routes>
       <Footer/>
-      </FormProvider>
-  </CartProvider>
+        </FormProvider>
+        </CartProvider>
     </Router>
   );
 };

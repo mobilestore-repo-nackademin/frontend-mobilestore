@@ -5,7 +5,7 @@ import ChosePayment from './ChosePayment';
 import ChoseDelivery from './ChoseDelivery';
 import HomeDelivery from './HomeDelivery';
 import InvoicePayment from './InvoicePayment';
-import PaymentPage from './CardPayment';
+import CardPayment from './CardPayment';
 
 const MyTabsComponent = () => {
   const [activeTab, setActiveTab] = React.useState(0);
@@ -19,9 +19,11 @@ const MyTabsComponent = () => {
   };
 
   return (
+    <div className='container'>
+    <div className="tabs-container">
     <Tabs onSelect={handleTabSelect} selectedIndex={activeTab}>
       <TabList>
-        <Tab>Leverans</Tab>
+        <Tab> Leverans </Tab>
         <Tab>Hemleverans</Tab>
         <Tab>Välj betalning</Tab>
         <Tab>Fakturabetalning</Tab>
@@ -41,9 +43,10 @@ const MyTabsComponent = () => {
         <InvoicePayment onTabCompletion={handleTabCompletion}/>
       </TabPanel>
       <TabPanel>
-        <PaymentPage onTabCompletion={handleTabCompletion}/>
+        <CardPayment onTabCompletion={handleTabCompletion}/>
       </TabPanel>
     </Tabs>
+    </div></div>
   );
 };
 

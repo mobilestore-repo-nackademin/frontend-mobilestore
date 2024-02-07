@@ -25,7 +25,6 @@ const InvoicePayment = ({ onTabCompletion }) => {
   };
 
   const handleConfirmation = () => {
-    // Gör något med tabToOpen, till exempel använd det som argument till onTabCompletion
     onTabCompletion(0);
     navigate('/ConfirmedPage');
   };

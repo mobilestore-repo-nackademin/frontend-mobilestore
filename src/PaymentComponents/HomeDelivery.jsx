@@ -6,11 +6,16 @@ const HomeDelivery = ({ onTabCompletion }) => {
   const { formData, updateFormData } = useFormContext();
   
   const handleConfirmation = (tabToOpen) => {
-    console.log('handleConfirmation called');
     onTabCompletion(tabToOpen);
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === 'zipcode' && value.length > 5) {
+      return;
+    }
+    
+
     updateFormData((prevData) => ({
       ...prevData,
       [name]: value,
