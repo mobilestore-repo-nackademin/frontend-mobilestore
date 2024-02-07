@@ -8,11 +8,13 @@ export const useFormContext = () => {
 
 export const FormProvider = ({ children }) => {
   const [formData, setFormData] = useState({
+    //Faktura
+
     name: '',
     street: '',
     city: '',
     zipcode: '',
-
+    //Leverans
     nameDelivery: '',
     addressDelivery: '',
     cityDelivery: '',

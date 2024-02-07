@@ -1,17 +1,19 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../Context/CartContext.jsx'; 
 import { useFormContext } from '../Context/FormContext.jsx';
 import './Payment.css';
 
 const ConfirmedPage = () => {
-  const { cart, getTotal } = useCart();
-  const { formData } = useFormContext();
-  const location = useLocation();  // Lägg till här
+  const { cart, getTotal } = useCart(); // Hämta varukorgen
+  const { formData } = useFormContext(); // Hämtar formulärens svar
+  const navigate = useNavigate(); // För att navigera
 
-  // Använd location för att få tillgång till state
-  const { state } = location;
 
+  const handleButtonClick = () => {
+    navigate('/');
+    window.location.reload(); // Ladda om sidan för att inte se produkter i varukorgen efter köp
+  };
 
   return (
       <div className="container">
@@ -62,7 +64,7 @@ const ConfirmedPage = () => {
           
         </div>
         </div>
-        <Link to="/"><button>Handla mer</button></Link>
+        <button onClick={handleButtonClick}>Handla mer</button>
       </div>
   );
 };

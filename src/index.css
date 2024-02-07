@@ -34,6 +34,7 @@ h1 {
   line-height: 1.1;
 }
 .container {
+  position: relative;
   width: 80%;
   margin: auto;
   display: flex;
