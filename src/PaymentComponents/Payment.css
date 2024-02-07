@@ -29,9 +29,7 @@ form {
 label {
   margin-bottom: 10px;
 }
-
-input,
-select {
+.CardInput {
   width: 30%;
   padding: 8px;
   border: 1px solid #ddd;
@@ -86,7 +84,7 @@ margin-right: 1em;
 }
 .grid-confirm {
   display: grid;
-<<<<<<< HEAD
+
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-content: center;
@@ -126,4 +124,32 @@ margin-right: 1em;
   justify-content: center;
   text-align: center;
 
+}
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Valfritt: Justera höjden efter behov */
+}
+
+.react-tabs {
+  width: 100%; /* Säkerställ att flikarna tar upp hela bredden */
+}
+
+.react-tabs__tab-list {
+  margin: 0; /* Ta bort eventuell standardmarginal */
+  padding: 0; /* Ta bort eventuell standardfyllnad */
+  display: flex;
+  justify-content: space-around; /* Justera vid behov */
+}
+
+.react-tabs__tab {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 15px; /* Justera fyllnad vid behov */
+}
+
+.react-tabs__tab--selected {
+  background-color: #2980b9;
 }

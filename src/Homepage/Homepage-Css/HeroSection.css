@@ -12,7 +12,7 @@
 .hero {
   
   flex: 7; /* Tar upp 70% av flex-containerns höjd */
-  background-image: url('/photos/sale-sign.jpg'); /* Lägg till sökvägen till din bildfil */
+  background-image: url('/photos/herophoto.jpg'); /* Lägg till sökvägen till din bildfil */
   background-size: cover;
   background-position: center;
   color: #fff;
