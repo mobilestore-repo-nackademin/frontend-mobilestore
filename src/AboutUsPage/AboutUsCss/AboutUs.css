@@ -3,17 +3,17 @@
     margin: 0 auto;
     padding: 20px;
     display: flex;
-    flex-direction: row; /* Placera elementen horisontellt */
-    flex-wrap: wrap; /* Wrap till nästa rad om det inte finns tillräckligt med utrymme */
-    justify-content: space-between; /* Placera boxarna jämnt fördelade över utrymmet */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
 
 }
 .aboutheros {
-    width: 100%; /* Säkerställer att rubriken tar upp hela bredden */
-    text-align: center; /* Centrera texten */
-    margin-bottom: 20px; /* Avstånd under rubriken */
-    order: -1; /* Placera rubriken först i ordningen */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    order: -1;
 }
 
 .heroAboutBox {
