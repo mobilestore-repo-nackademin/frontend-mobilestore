@@ -1,3 +1,4 @@
+// CartProvider.jsx
 import React, { createContext, useContext, useState, useMemo } from 'react';
 
 const CartContext = createContext();
@@ -13,6 +14,10 @@ export const useCart = () => {
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  const findProductIndex = (productId) => {
+    return cart.findIndex((product) => product.id === productId);
+  };
+
   const addToCart = (product) => {
     const productPrice = product.attributes && product.attributes.Price;
 
@@ -20,8 +25,18 @@ const CartProvider = ({ children }) => {
       const price = parseFloat(productPrice);
 
       if (!isNaN(price) && price >= 0) {
-        const updatedCart = [...cart, { ...product, price, title: product.attributes.Title }];
-        setCart(updatedCart);
+        const productIndex = findProductIndex(product.id);
+
+        if (productIndex !== -1) {
+          // Produkten finns redan i varukorgen, öka antalet istället för att lägga till en ny rad
+          const updatedCart = [...cart];
+          updatedCart[productIndex].quantity += 1;
+          setCart(updatedCart);
+        } else {
+          // Produkten finns inte i varukorgen, lägg till en ny rad
+          const updatedCart = [...cart, { ...product, price, title: product.attributes.Title, quantity: 1 }];
+          setCart(updatedCart);
+        }
       } else {
         console.error('Invalid price:', productPrice);
       }
@@ -31,8 +46,19 @@ const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (productId) => {
-    const updatedCart = cart.filter((product) => product.id !== productId);
-    setCart(updatedCart);
+    const productIndex = findProductIndex(productId);
+
+    if (productIndex !== -1) {
+      const updatedCart = [...cart];
+      if (updatedCart[productIndex].quantity > 1) {
+        // Minska antalet om det är mer än en av samma produkt
+        updatedCart[productIndex].quantity -= 1;
+      } else {
+        // Ta bort produkten helt om det är bara en kvar
+        updatedCart.splice(productIndex, 1);
+      }
+      setCart(updatedCart);
+    }
   };
 
   const clearCart = () => {
@@ -40,7 +66,7 @@ const CartProvider = ({ children }) => {
   };
 
   const getTotal = () => {
-    const total = cart.reduce((total, product) => total + product.price, 0);
+    const total = cart.reduce((total, product) => total + product.price * product.quantity, 0);
     console.log('Total:', total);
     return total;
   };

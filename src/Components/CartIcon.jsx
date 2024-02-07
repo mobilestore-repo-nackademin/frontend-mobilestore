@@ -1,18 +1,22 @@
 import { useCart } from '../Context/CartContext.jsx';
 import React from 'react';
+import '../CssFolder/Header.css';
 
 const CartIcon = () => {
-  const { toggleCartVisibility } = useCart();
+  const { toggleCartVisibility, cart } = useCart();
+  
+  const cartIconClass = cart.length > 0 ? 'cart-icon-filled' : 'cart-icon-empty';
+
   
   return (
     <div>
-      <svg
+       <svg
         onClick={toggleCartVisibility}        
         width="2em"
         height="2em"
         viewBox="0 0 1024 1024"
         fill="#ffffff"
-        className="icon"
+        className={`icon ${cartIconClass}`} // Lägg till den nya klassen här
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         stroke="#ffffff"

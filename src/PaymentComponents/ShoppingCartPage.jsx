@@ -22,15 +22,17 @@ const ShoppingCartPage = () => {
 
       <div className="grid-confirm">
         <div className="grid-confirm-item">
-          <strong>Produkter</strong> <br />
-          {cart.map((item, index) => (
-            <div key={index}>
-              <p>{item.attributes.Title}</p>
-              <strong>Pris: {item.attributes.Price} kr</strong>
-            </div>
-          ))}
-          <br />
-          <strong>Totalt: {getTotal().toFixed(2)} kr</strong> <br />
+        <strong>Produkter</strong> <br />
+  {cart.map((item, index) => (
+    <div key={index}>
+      <p>
+        <span>{item.quantity}x {item.attributes.Title} </span>
+      </p>
+      <strong>Totalt: { (item.attributes.Price * item.quantity).toFixed(2) } kr</strong>
+    </div>
+  ))}
+  <br />
+  <strong>Totalt: {getTotal().toFixed(2)} kr</strong> <br />
 
           <Link to="/">
             <button>Handla mer</button>

@@ -48,7 +48,9 @@ const ConfirmedPage = () => {
           {cart.map((item, index) => (
             <div key={index}>
               <p>{item.title}</p>
-              <strong>Pris: {item.price} kr</strong>
+              <strong> {item.quantity}x </strong>
+              <strong> {item.price} kr </strong><br />
+              <strong>Totalt: {item.price} kr</strong>
             </div>
           ))}
           <br />

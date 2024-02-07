@@ -7,7 +7,6 @@ const DeliveryTerms = () => {
     return (
         <div className="deliver">
 
-
             <div className="delivery-info">
                 <h5>1. Leveranstid</h5>
                 <p>Vi strävar efter att leverera dina produkter så snabbt som möjligt. Leveranstiden kan variera beroende på din plats och produktens tillgänglighet. Kontakta vår kundtjänst för specifik information om leveranstiden för din beställning.</p>
@@ -29,9 +28,15 @@ const DeliveryTerms = () => {
             </div>
 
 
-            <div className="delivery-info">
+            <div className="delivery-info-customerService">
                 <h5>5. Kundtjänst</h5>
-                <p>Om du har frågor om leveransen eller vill ha mer information, vänligen kontakta vår kundtjänst.</p>
+                <p>Välkommen till den coolaste mobilupplevelsen någonsin! Vårt gäng på kundservice är som den bästa backstage-passet till din mobilvärld, redo att rocka din vardag och fixa alla dina mobila äventyr.
+
+När du ringer in till oss, är det som att slå tonerna till din favoritlåt. Våra kundtjänsthjältar är inte bara tekniknördar, de är också partyplanerare för din digitala fest! Inga frågor är för stora eller för små – vi är här för att göra tekniken lika smidig som din favoritmelodi.
+
+Vi är som din personliga roadie, redo att justera ljudet och se till att din mobilupplevelse är klockren. Och om du någonsin känner dig "tech-trapped," tveka inte att kontakta oss. Vi är här för att rädda dagen och få dig att känna dig som den rockstjärna du är!
+
+Så slå oss en signal, skicka ett meddelande eller joina vår mobila fiesta online – vår kundservice är redo att sätta stilen på din mobilvärld. Let's keep the mobile vibes strong! 📱🎸</p>
             </div>
             <div>
                 <img className= 'delivery-photo' src="./photos/leveransbil.png" alt=""/>

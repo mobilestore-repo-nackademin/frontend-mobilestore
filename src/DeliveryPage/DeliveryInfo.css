@@ -1,11 +1,8 @@
-
-
-
-
 .deliver {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 5em;
 }
 
 .delivery-heading,
@@ -29,7 +26,15 @@
     height: 65%;
     
 }
-
+.delivery-info-customerService{
+    flex: 1 0 calc(20% - 20px); /* Adjust width with margin */
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd; /* Soften border color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 17em;
+}
 
 
 
