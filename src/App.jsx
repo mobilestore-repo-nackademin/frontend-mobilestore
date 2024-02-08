@@ -22,6 +22,7 @@ import { CartProvider } from './Context/CartContext.jsx';
 import { FormProvider } from './Context/FormContext';
 import PurchasePage from './PaymentComponents/PurchasePage.jsx'
 
+
 const App = () => {
   return (
     <Router>
