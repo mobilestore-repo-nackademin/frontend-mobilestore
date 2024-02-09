@@ -1,29 +1,29 @@
 
 .form-group {
   display: flex;
-  flex-direction: row; /* Ändra från column till row för att få inputfälten i en rad */
+  flex-direction: row;
   align-items: center;
 }
 
 .form-group label {
-  margin-right: 10px; /* Lägg till lite mellanrum mellan etiketter och inputfält */
+  margin-right: 10px; 
 }
 .form-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem; /* Justera detta värde efter dina preferenser */
+  margin-bottom: 1rem; 
 }
 .form-group label {
-  width: 150px; /* Gemensam bredd för alla etiketter, justera efter behov */
-  margin-bottom: 5px; /* Lite avstånd mellan etikett och input */
+  width: 150px; 
+  margin-bottom: 5px; 
 }
 .form-group input,
 .form-group select {
-  width: 50%; /* Fyller resten av tillgängligt utrymme */
-  padding: 8px; /* Justera padding efter behov */
-  box-sizing: border-box; /* Inkluderar padding i bredden */
-  margin-bottom: 10px; /* Justera detta värde efter dina preferenser */
+  width: 50%; 
+  padding: 8px; 
+  box-sizing: border-box; 
+  margin-bottom: 10px; 
 }
 
 
@@ -58,8 +58,9 @@ margin-right: 1em;
 
 }
 .grid-confirm {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
   align-items: center;
   justify-content: center;
   justify-content: center;
@@ -70,20 +71,20 @@ margin-right: 1em;
   border: 1px solid #ddd;
   padding: 20px;
   text-align: center;
-
+  flex: 1;
 
 }
 .grid-container {
   display: flex;
-  justify-content: space-around; /* Lägg till utrymme mellan grid-item */
-  align-items: center; /* Centrera vertikalt */
+  justify-content: space-around; 
+  align-items: center; 
   max-width: 940px;
   width: 80%;
   margin: 10% 20% 20% auto;
 }
 
 .grid-item {
-  text-align: center; /* Centrera innehållet horisontellt */
+  text-align: center; 
 }
 .h2-payment{
   color: black;
@@ -100,24 +101,24 @@ margin-right: 1em;
   align-items: center;
   text-align: center;
   margin-top: 3em;
-  height: 100vh; /* Valfritt: Justera höjden efter behov */
+  height: 100vh; 
 }
 
 .react-tabs {
-  width: 100%; /* Säkerställ att flikarna tar upp hela bredden */
+  width: 100%; 
 }
 
 .react-tabs__tab-list {
-  margin: 0; /* Ta bort eventuell standardmarginal */
-  padding: 0; /* Ta bort eventuell standardfyllnad */
+  margin: 0; 
+  padding: 0; 
   display: flex;
-  justify-content: space-around; /* Justera vid behov */
+  justify-content: space-around; 
 }
 
 .react-tabs__tab {
   background-color: #3498db;
   color: #ffffff;
-  padding: 10px 15px; /* Justera fyllnad vid behov */
+  padding: 10px 15px; 
 }
 
 .react-tabs__tab--selected {
