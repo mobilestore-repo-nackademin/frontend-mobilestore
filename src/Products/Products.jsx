@@ -5,6 +5,7 @@ import { useCart } from '../Context/CartContext.jsx';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const { addToCart } = useCart();
 
@@ -21,10 +22,19 @@ const Products = () => {
     }
   };
 
+  const fetchAllCategories = async () => {
+    try {
+      const response = await axios.get('http://localhost:1337/api/categories');
+      setCategories(response.data.data);
+    } catch (error) {
+      console.error('Error fetching all categories:', error);
+    }
+  };
+
   const fetchProductsByCategory = async (categoryId) => {
     try {
-      const categoryResponse = await axios.get(`http://localhost:1337/api/categories/${categoryId}?populate[products][populate]=*`);
-      const categoryData = categoryResponse.data && categoryResponse.data.data;
+      const response = await axios.get(`http://localhost:1337/api/categories/${categoryId}?populate[products][populate]=*`);
+      const categoryData = response.data && response.data.data;
       const categoryProducts = categoryData && categoryData.attributes && categoryData.attributes.products && categoryData.attributes.products.data;
 
       if (categoryProducts) {
@@ -50,20 +60,17 @@ const Products = () => {
 
   useEffect(() => {
     fetchAllProducts();
+    fetchAllCategories();
   }, []);
 
   return (
     <div className='productContainer'>
       <div className="boxes">
-        <div className="box box1" onClick={() => handleFilter(1)}>
-          <h2>Mobiler</h2>
-        </div>
-        <div className="box box2" onClick={() => handleFilter(3)}>
-          <h2>Mobilskal</h2>
-        </div>
-        <div className="box box3" onClick={() => handleFilter(2)}>
-          <h2>Mobilladdare</h2>
-        </div>
+        {categories.map((category) => (
+          <div key={category.id} className={`box box${category.id}`} onClick={() => handleFilter(category.id)}>
+            <h2>{category.attributes.Title}</h2>
+          </div>
+        ))}
       </div>
 
       <div className="product-list">
@@ -87,17 +94,17 @@ const Products = () => {
 
           return (
             <div key={product.id} className="product-card">
-            {photoData.url && <img src={`http://localhost:1337${photoData.url}`} alt={attributes.Title} />}
-            <div className="product-details">
-              <h3>{attributes.Title}</h3>
-              <p>{attributes.Description}</p>
+              {photoData.url && <img src={`http://localhost:1337${photoData.url}`} alt={attributes.Title} />}
+              <div className="product-details">
+                <h3>{attributes.Title}</h3>
+                <p>{attributes.Description}</p>
+              </div>
+              <div className="product-footer">
+                <p>Pris: <br /><strong> {attributes.Price}:- </strong></p>
+                <p>Lagerstatus: <strong style={{ color: stockStatusColor }}> <br /> {stockStatusText}</strong></p>
+                {stock > 0 && <button onClick={() => handleAddToCart(product)}>Köp</button>}
+              </div>
             </div>
-            <div className="product-footer">
-              <p>Pris: <br /><strong> {attributes.Price}:- </strong></p>
-              <p>Lagerstatus: <strong style={{ color: stockStatusColor }}> <br /> {stockStatusText}</strong></p>
-              {stock > 0 && <button onClick={() => handleAddToCart(product)}>Köp</button>}
-            </div>
-          </div>
           );
         })}
       </div>

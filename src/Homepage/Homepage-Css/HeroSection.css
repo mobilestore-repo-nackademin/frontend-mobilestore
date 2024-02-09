@@ -1,34 +1,36 @@
 
 .hero {
   
-  flex: 7; /* Tar upp 70% av flex-containerns höjd */
-  background-image: url('/photos/herophoto.jpg'); /* Lägg till sökvägen till din bildfil */
+ height: 35em;
+ margin-left: 1em;
+ margin-right: 1em;
+  background-image: url('/photos/herophoto.jpg'); 
   background-size: cover;
   background-position: center;
   color: #fff;
   display: flex;
-  flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  text-align: center; /* Centrera texten horisontellt */
+  text-align: center; 
 }
 
 .hero h1 {
-  margin-bottom: 20px; /* Lägg till extra mellanrum under texten om det behövs */
+  margin-bottom: 20px; 
 }
 
 
 .boxes .box button {
-  margin-top: auto; /* Placerar knappen längst ner och centreras horisontellt */
-  background-color: #3498db; /* Samma bakgrundsfärg som hero-knappen */
+  margin-top: auto; 
+  background-color: #3498db; 
   color: #fff;
-  padding: 10px 20px; /* Justera padding efter behov */
+  padding: 10px 20px; 
   border: none;
   cursor: pointer;
 }
 .hero button{
-  margin-top: auto; /* Placerar knappen längst ner och centreras horisontellt */
-  background-color: #3498db; /* Samma bakgrundsfärg som hero-knappen */
+  margin-top: auto; 
+  background-color: #3498db;
   color: #fff;
   width: auto;
   border: none;
@@ -37,13 +39,13 @@
 }
 
 .boxes {
-  flex: 3; /* Tar upp 30% av flex-containerns höjd */
+  flex: 3; 
   display: flex;
-  justify-content: space-around; /* Lägg till detta för att centrera och skapa utrymme mellan boxarna */
+  justify-content: space-around; 
 }
 
 .box {
-  flex: 1; /* Varje box tar upp lika mycket utrymme */
+  flex: 1; 
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -58,10 +60,10 @@
   background-position: center;
   color: #fff;
   display: flex;
-  flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  text-align: center; /* Centrera texten horisontellt */
+  text-align: center; 
 }
 .box2{
   background-image: url('/photos/phone-cases.jpg');
@@ -69,10 +71,10 @@
   background-position: center;
   color: #fff;
   display: flex;
-  flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  text-align: center; /* Centrera texten horisontellt */
+  text-align: center; 
 }
 .box3{
   background-image: url('/photos/phone-charger.jpg');
@@ -80,8 +82,8 @@
   background-position: center;
   color: #fff;
   display: flex;
-  flex-direction: column; /* Ändra riktningen till kolumn för att placera knappen under texten */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  text-align: center; /* Centrera texten horisontellt */
+  text-align: center; 
 }
